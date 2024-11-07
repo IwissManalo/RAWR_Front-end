@@ -1,0 +1,270 @@
+body {
+    font-family: "Poppins", sans-serif;
+    color: #0c0c0c;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh; 
+    justify-content: flex-start; 
+    align-items: center; 
+}
+
+
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; 
+    width: 100%; 
+    position: relative; 
+}
+
+
+.header-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #FF6500;
+    color: white;
+    padding: 15px 80px;
+    font-size: 15px;
+    text-align: center;
+}
+
+
+.title-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    color: #C40C0C;
+    font-size: 17px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center; 
+}
+
+
+.logo {
+    width: 50px; 
+    height: 50px;
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    width: 100%; 
+    max-width: 450px; 
+    box-sizing: border-box; 
+    padding: 0 15px; 
+}
+
+
+.faq-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 120px;
+}
+
+
+.faq-subtitle {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 50px;
+}
+
+
+details:first-of-type {
+    border-top: 2px solid black;
+    padding-top: 10px;
+}
+
+
+details:last-of-type {
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+}
+
+
+details {
+    margin: 5px 0;
+    width: 800px; 
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    text-align: left;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 10px;
+    color: #FF6500;
+}
+
+
+summary::after {
+    content: " ▼";
+    font-size: 0.9em;
+    color: black;
+    transition: transform 0.2s;
+}
+
+
+details[open] summary::after {
+    transform: rotate(180deg);
+}
+
+
+.answer {
+    padding-top: 10px;
+    font-style: italic;
+    color: #555;
+}
+
+
+.footer_faq {
+    background-color: #FF6500;
+    padding: 20px;
+    color: #fefdfc;
+    width: 100%;
+    text-align: center;
+    margin-top: 80px; 
+}
+/* FAQ SECTION END */
+
+/* FOOTER START */
+.footer_reset {
+  background-color: #FF9B2C;
+  padding: 20px;
+  position: fixed; 
+  left: 0;       
+  right: 0;       
+  bottom: 0; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;       
+}
+
+.footer_section p {
+  font-size: 15px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.header-rightreset {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #FF9B2C;
+    color: white;
+    padding: 22px 80px;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.reset-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.input-box {
+    width: 100%;
+    max-width: 350px;
+    box-sizing:border-box;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-button {
+    max-width: 350px;
+    width: 400px;
+    padding: 10px;
+    background-color: #FF9B2C;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 70px;
+    transition: 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #C40C0C;
+}
+
+.footer_color{
+    color: #fefdfc;
+}
+
+.promptText{
+color: #C40C0C;
+margin-top: 0px;
+}
+
+.pin-box {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.reminder-box {
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.reminder-box p {
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+.reminder-box ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.reminder-box li {
+    margin-bottom: 5px;
+}
