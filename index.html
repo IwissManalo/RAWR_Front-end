@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R.A.W.R - Landing Page</title>
-    <link rel="icon" type="image/x-icon" href="Images/logo.png">
+    <link rel="icon" type="image/x-icon" href="CSS/Images/logo.png">
     <link href="CSS/style.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -34,19 +34,73 @@
         </div>
     </section>
 
+    <section class="map-section">
+        <div id="map"></div> <!-- Google Map will be here -->
+
+        <div class="content-overlay">
+            <h2>Want to Explore Shops?</h2>
+            <p>Join us today and experience a new way to manage your car repairs and maintenance.</p>
+            <button class="register-btn">REGISTER</button>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="features-heading">
+            <h2>Why Choose Us?</h2>
+            <div class="line"></div>
+            <p>At R.A.W.R, we prioritize convenience, reliability, and innovation for both car owners and auto repair shops. 
+                Here's why we're your best choice:</p>
+        </div>
+    
+        <div class="features-icons">
+            <div class="icon-container">
+                <div class="icon-circle">
+                     <img src="CSS/Images/carIcon.png" alt="Icon Image" class="icon-img">
+                    <span class="icon-text">We Enhance Your Ride</span>
+                </div>
+            </div>
+            <div class="icon-container">
+                <div class="icon-circle">
+                     <img src="CSS/Images/gearIcon.png" alt="Icon Image" class="icon-img">
+                    <span class="icon-text">We Build Connections</span>
+                </div>
+            </div>
+            <div class="icon-container">
+                <div class="icon-circle">
+                     <img src="CSS/Images/pinIcon.png" alt="Icon Image" class="icon-img">
+                    <span class="icon-text">We Help You Find the Nearest Shops</span>
+                </div>
+            </div>
+            <div class="icon-container">
+                <div class="icon-circle">
+                     <img src="CSS/Images/userIcon.png" alt="Icon Image" class="icon-img">
+                    <span class="icon-text">We Elevate Your Experience</span>
+                </div>
+            </div>
+            <div class="icon-container">
+                <div class="icon-circle">
+                     <img src="CSS/Images/connectionIcon.png" alt="Icon Image" class="icon-img">
+                    <span class="icon-text">We Bridge the Gap Between You And Your Vehicle</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
     <div class="wrapper">
         <ul>
             <li><a href="#">HOME</a></li>
             <li><a href="#">REGISTER</a></li>
             <li><a href="#">ABOUT US</a></li>
-            <li><a href="#">HELP CENTER</a></li>
+            <li><a href="FAQs.html">HELP CENTER</a></li>
         </ul>
     </div>
 
     <footer class="footer_section">
         <div>
             <p>
-                <i class="fas fa-envelope"></i> <!-- Email icon -->
+                <i class="fas fa-envelope"></i>
                 rawrofficial@gmail.com
             </p>
         </div>
@@ -56,6 +110,29 @@
         </p>
     </footer>
 
-</body>
+    <script>
+        function initMap() {
+            const ceuLocation = { lat: 14.5589, lng: 121.0244 }; // Coordinates for Centro Escolar University, Makati City
 
+            const mapOptions = {
+                center: ceuLocation, // Set the map center to CEU location
+                zoom: 15, // Adjust zoom level
+                disableDefaultUI: true, // Disable UI controls
+                zoomControl: true, // Enable zoom control
+            };
+
+            const map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+            const marker = new google.maps.Marker({
+                position: ceuLocation,
+                map: map,
+                title: 'Centro Escolar University, Makati City',
+            });
+        }
+    </script>
+
+    <!-- Google Maps API -->
+    <script src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=CEU+Makati+Esteban+St+Philippines" async defer></script>
+
+</body>
 </html>
