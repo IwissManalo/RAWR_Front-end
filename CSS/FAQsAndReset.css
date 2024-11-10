@@ -1,5 +1,5 @@
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #0c0c0c;
     background-color: #ffffff;
     margin: 0;
@@ -31,6 +31,7 @@ body {
     padding: 15px 80px;
     font-size: 15px;
     text-align: center;
+    cursor: pointer;
 }
 
 
@@ -41,7 +42,7 @@ body {
     background-color: transparent;
     color: #C40C0C;
     font-size: 17px;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: bold;
     padding: 15px 20px;
     display: flex;
@@ -69,7 +70,7 @@ body {
 
 
 .faq-title {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: bold;
     font-size: 35px;
     white-space: nowrap;
@@ -80,10 +81,9 @@ body {
 
 
 .faq-subtitle {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: bold;
     font-size: 15px;
-    margin-bottom: 50px;
 }
 
 
@@ -139,24 +139,36 @@ details[open] summary::after {
     padding-top: 10px;
     font-style: italic;
     color: #555;
+    text-align: left;
 }
 
 
 .footer_faq {
     background-color: #FF6500;
-    padding: 20px;
-    color: #fefdfc;
+    padding: 10px;
     width: 100%;
-    text-align: center;
-    margin-top: 80px; 
+    margin-top: 80px;
+    font-size: 13px; 
+    left: 0;       
+    right: 0;       
+    bottom: 0; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+}
+
+.footer_faq p{
+    font-size: 13px;
+    margin: 10px;
+    color: #ffffff;
 }
 /* FAQ SECTION END */
 
 /* FOOTER START */
 .footer_reset {
   background-color: #FF9B2C;
-  padding: 20px;
-  position: fixed; 
+  padding: 10px;
+  position: absolute; 
   left: 0;       
   right: 0;       
   bottom: 0; 
@@ -166,7 +178,7 @@ details[open] summary::after {
 }
 
 .footer_section p {
-  font-size: 15px;
+  font-size: 13px;
   margin: 0;
   color: #ffffff;
 }
@@ -177,7 +189,7 @@ details[open] summary::after {
     right: 0;
     background-color: #FF9B2C;
     color: white;
-    padding: 22px 80px;
+    padding: 15px 80px;
     font-size: 15px;
     text-align: center;
     cursor: pointer;
@@ -185,7 +197,7 @@ details[open] summary::after {
 
 
 .reset-title {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: bold;
     font-size: 25px;
     white-space: nowrap;
@@ -207,6 +219,7 @@ details[open] summary::after {
     max-width: 350px;
     width: 400px;
     padding: 10px;
+    font-weight: bold;
     background-color: #FF9B2C;
     color: white;
     border: none;
@@ -227,8 +240,9 @@ details[open] summary::after {
 }
 
 .promptText{
-color: #C40C0C;
-margin-top: 0px;
+    color: #C40C0C;
+    font-weight: bold;
+    margin-top: 0px;
 }
 
 .pin-box {
