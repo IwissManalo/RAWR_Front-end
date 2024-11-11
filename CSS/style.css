@@ -17,7 +17,7 @@ body {
   left: 0;
   height: 100vh;  
   width: 100%;
-  background: #C40C0C;
+  background: #C50C0C;
   clip-path: circle(25px at calc(100% - 45px) 37px);
   visibility: hidden; 
   opacity: 0; 
@@ -32,16 +32,16 @@ body {
 
 .menu-btn {
   display: inline-block;
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
   padding-left: 20px;
   font-size: 20px;
   color: white;
-  background-color: #C40C0C;
+  background-color: #C50C0C;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   text-align: center;
-  line-height: 40px;
+  line-height: 50px;
 }
 
 #active:checked ~ .nav-right .menu-btn i {
@@ -70,7 +70,7 @@ body {
   padding: 20px;
   color: #fff;
   position: relative;
-  line-height: 40px;
+  line-height: 50px;
   transition: all 0.3s ease;
 }
 
@@ -79,7 +79,7 @@ body {
   content: "";
   background: #fff;
   width: 100%;
-  height: 40px;
+  height: 50px;
   left: 0;
   border-radius: 50px;
   transform: scaleY(0);
@@ -92,7 +92,7 @@ body {
 }
 
 .wrapper ul li a:hover {
-  color: #C40C0C;
+  color: #C50C0C;
 }
 
 input[type="checkbox"] {
@@ -136,7 +136,7 @@ input[type="checkbox"] {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #C40C0C;
+  background-color: #C50C0C;
   color: white;
   padding: 30px;
   height: 100%;
@@ -311,7 +311,7 @@ input[type="checkbox"] {
 }
 
 .features-heading h2 {
-  color: #C40C0C;
+  color: #C50C0C;
   font-size: 36px;
   margin-bottom: 10px;
 }
@@ -360,8 +360,39 @@ input[type="checkbox"] {
   width: 50%;  
   height: 50%; 
   object-fit: cover;
-  transition: opacity 0.3s; 
+  transition: opacity 0.3s;
 }
+
+.icon-container:nth-child(1) .icon-img {
+  width: 63%;  
+  height: 63%;  
+  object-fit: contain;  
+}
+
+.icon-container:nth-child(2) .icon-img {
+  width: 70%;  
+  height: 70%;  
+  object-fit: contain;  
+}
+
+.icon-container:nth-child(3) .icon-img {
+  width: 52%;  
+  height: 76%;  
+  object-fit: cover;  
+}
+
+.icon-container:nth-child(4) .icon-img {
+  width: 100%;  
+  height: 65%;  
+  object-fit: contain;  
+}
+
+.icon-container:nth-child(5) .icon-img {
+  width: 59%;  
+  height: 71%;  
+  object-fit: cover;  
+}
+
 
 .icon-text {
   display: none;
@@ -377,7 +408,7 @@ input[type="checkbox"] {
 }
 
 .icon-circle:hover {
-  background-color: #C40C0C;
+  background-color: #C50C0C;
   transform: scale(1.1);
 }
 
@@ -409,12 +440,13 @@ input[type="checkbox"] {
 .icon-container:nth-child(5) .icon-circle {
   margin-top: 0;
 }
+
 /* FEATURES SECTION END */
 
 
 /* FOOTER START */
 .footer_section {
-  background-color: #C40C0C;
+  background-color: #C50C0C;
   padding: 20px;
   position: relative; 
   left: 0;       
