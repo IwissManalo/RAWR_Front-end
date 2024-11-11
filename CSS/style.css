@@ -131,7 +131,11 @@ input[type="checkbox"] {
   font-weight: bold;
   color: #ffffff;
 }
-
+.nav-title-red {
+  font-size: 18px;
+  font-weight: bold;
+  color: #C50C0C;
+}
 .nav-right {
   position: absolute;
   top: 0;
@@ -560,4 +564,95 @@ input[type="checkbox"] {
   color: #fefdfc;
 }
 
-/* FOOTER END */
+
+
+/* Ensure the Poppins font is applied to the entire body */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Center and style the login section */
+/* Ensure the Poppins font is applied to the entire body */
+
+/* Center and style the login section */
+.login-section {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Style for the title */
+/* Ensure the Poppins font is applied to the entire body */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* Center and style the login section */
+.login-section {
+  margin-top: 120px;
+  margin-bottom: 215px;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Style for the title */
+.login-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Smaller font for other text in the section */
+.login-section p,
+.login-section input[type="email"],
+.login-section input[type="password"],
+.login-section button {
+  font-size: 0.9em;
+}
+
+/* Form styles */
+.login-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Textbox styles */
+.login-section input[type="email"],
+.login-section input[type="password"] {
+  width: 100%;
+  max-width: 400px; /* Increased width */
+  padding: 10px;
+  background-color: #D9D9D9; /* Set background color */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Button styles */
+/* Button styles */
+.login-section button {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 20px;
+  background-color: #FF9B2C;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Button hover effect */
+.login-section button:hover {
+  background-color: #C40C0C; /* Changes to red on hover */
+}
+
+.login-section a {
+  text-decoration: underline;
+}
+/* Button styles */
+/* Button styles */
+/* Button styles */
+
