@@ -35,15 +35,24 @@
     </section>
 
     <section class="map-section">
-        <div id="map"></div> <!-- Google Map will be here -->
+        <!-- Google Map Embed -->
+        <div class="map_container">
+            <div class="map-responsive">
+                <iframe 
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=CEU+Makati+Esteban+St+Philippines" 
+                    frameborder="0" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
 
         <div class="content-overlay">
             <h2>Want to Explore Shops?</h2>
             <p>Join us today and experience a new way to manage your car repairs and maintenance.</p>
             <button class="register-btn">REGISTER</button>
         </div>
-    </section>
-
+    </section>    
+    
     <section class="features-section">
         <div class="features-heading">
             <h2>Why Choose Us?</h2>
@@ -86,8 +95,6 @@
         </div>
     </section>
     
-    
-
     <div class="wrapper">
         <ul>
             <li><a href="#">HOME</a></li>
@@ -110,29 +117,25 @@
         </p>
     </footer>
 
+    <!-- Google Maps JavaScript API -->
+    <script src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=CEU+Makati+Esteban+St+Philippines" async defer></script>
     <script>
         function initMap() {
-            const ceuLocation = { lat: 14.5589, lng: 121.0244 }; // Coordinates for Centro Escolar University, Makati City
-
-            const mapOptions = {
-                center: ceuLocation, // Set the map center to CEU location
-                zoom: 15, // Adjust zoom level
-                disableDefaultUI: true, // Disable UI controls
-                zoomControl: true, // Enable zoom control
-            };
-
-            const map = new google.maps.Map(document.getElementById('map'), mapOptions);
-
+            const ceuLocation = { lat: 14.5589, lng: 121.0244 }; // Coordinates for CEU, Makati City
+            const map = new google.maps.Map(document.getElementById('map'), {
+                center: ceuLocation,
+                zoom: 15,
+                disableDefaultUI: true,
+                zoomControl: true 
+            });
+            
             const marker = new google.maps.Marker({
                 position: ceuLocation,
                 map: map,
-                title: 'Centro Escolar University, Makati City',
+                title: 'Centro Escolar University, Makati City'
             });
         }
     </script>
-
-    <!-- Google Maps API -->
-    <script src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=CEU+Makati+Esteban+St+Philippines" async defer></script>
 
 </body>
 </html>
