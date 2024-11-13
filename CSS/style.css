@@ -102,7 +102,7 @@ input[type="checkbox"] {
 
 /* NAVIGATION HEADER START */
 .nav-header {
-  position: absolute; /* Change from relative to absolute */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -112,7 +112,7 @@ input[type="checkbox"] {
   padding: 10px 20px;
   color: white;
   z-index: 10;
-  background-color: transparent; /* Ensure background is transparent */
+  background-color: transparent; 
 }
 
 .nav-left {
@@ -151,6 +151,7 @@ input[type="checkbox"] {
 
 #active:checked ~ .nav-header .nav-logo,
 #active:checked ~ .nav-header .nav-title,
+#active:checked ~ .nav-header .nav-title-red,
 #active:checked ~ .nav-header .nav-btn,
 #active:checked ~ .hero-section,
 #active:checked ~ .map-section{
@@ -190,7 +191,7 @@ input[type="checkbox"] {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url('Images/heroBG.png'); /* Replace with your actual image path */
+  background-image: url('Images/heroBG.png');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -544,6 +545,69 @@ input[type="checkbox"] {
 
 /* FEATURES SECTION END */
 
+/* LOG-IN START */
+.login-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.login-section {
+  margin-top: 120px;
+  margin-bottom: 215px;
+  text-align: center;
+  padding: 20px;
+}
+
+.login-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.login-section p,
+.login-section input[type="email"],
+.login-section input[type="password"],
+.login-section button {
+  font-size: 0.9em;
+}
+
+.login-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.login-section input[type="email"],
+.login-section input[type="password"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  background-color: #D9D9D9; 
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-section button {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 20px;
+  background-color: #FF9B2C;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-section button:hover {
+  background-color: #C40C0C;
+}
+
+.login-section a {
+  text-decoration: underline;
+}
+/* LOG-IN END */
 
 /* FOOTER START */
 .footer_section {
@@ -563,96 +627,4 @@ input[type="checkbox"] {
   margin: 0;
   color: #fefdfc;
 }
-
-
-
-/* Ensure the Poppins font is applied to the entire body */
-body {
-  font-family: 'Poppins', sans-serif;
-}
-
-/* Center and style the login section */
-/* Ensure the Poppins font is applied to the entire body */
-
-/* Center and style the login section */
-.login-section {
-  text-align: center;
-  padding: 20px;
-}
-
-/* Style for the title */
-/* Ensure the Poppins font is applied to the entire body */
-body {
-  font-family: 'Poppins', sans-serif;
-}
-
-
-
-/* Center and style the login section */
-.login-section {
-  margin-top: 120px;
-  margin-bottom: 215px;
-  text-align: center;
-  padding: 20px;
-}
-
-/* Style for the title */
-.login-title {
-  font-size: 1.5em;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-/* Smaller font for other text in the section */
-.login-section p,
-.login-section input[type="email"],
-.login-section input[type="password"],
-.login-section button {
-  font-size: 0.9em;
-}
-
-/* Form styles */
-.login-section form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-/* Textbox styles */
-.login-section input[type="email"],
-.login-section input[type="password"] {
-  width: 100%;
-  max-width: 400px; /* Increased width */
-  padding: 10px;
-  background-color: #D9D9D9; /* Set background color */
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-/* Button styles */
-/* Button styles */
-.login-section button {
-  width: 100%;
-  max-width: 400px;
-  padding: 10px 20px;
-  background-color: #FF9B2C;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease; /* Smooth transition for background color */
-}
-
-/* Button hover effect */
-.login-section button:hover {
-  background-color: #C40C0C; /* Changes to red on hover */
-}
-
-.login-section a {
-  text-decoration: underline;
-}
-/* Button styles */
-/* Button styles */
-/* Button styles */
-
+/* FOOTER END */
