@@ -75,6 +75,9 @@ body {
 .btn-yes {
     background-color: #FF9B2C;
 }
+.btn-no {
+    background-color: #C40C0C;
+}
 
 .button-confirm {
     background-color: #e6891b; /* Initial background color */
@@ -105,6 +108,18 @@ body {
     margin-top: 20px; /* Added margin to move footer up slightly */
 }
 
+.footer_section2 {
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #FFC100;
+    color: white;
+    font-size: 0.9em;
+    margin-top: 20px; /* Added margin to move footer up slightly */
+}
+
 .footer-left, .footer-right {
     display: flex;
     align-items: center;
@@ -119,3 +134,13 @@ body {
     margin: 0;
     color: white;
 }
+
+
+
+
+
+
+
+
+
+
