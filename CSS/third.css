@@ -1,0 +1,121 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.nav-logo {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.nav-title-red {
+    font-weight: 600;
+    color: #C40C0C;
+    font-size: 1.2em;
+}
+
+.container {
+    text-align: center;
+    margin-top: 240px;
+    flex: 1;
+}
+
+.logout-message {
+    font-weight: 700; /* Bold font */
+    font-size: 1.5em; /* Larger font size */
+    color: #333;
+    margin: 20px 0;
+}
+
+.logout-message2 {
+    font-weight: 700; /* Bold font */
+    font-size: 1.3em; /* Larger font size */
+    color: #333;
+    margin: 20px 0;
+}
+
+.prompt {
+    font-style: Poppins;
+}
+
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn-yes, .btn-no, .button-confirm {
+    font-weight: 600;
+    margin-top: 20px;
+    padding: 10px 60px; /* Adjusted padding for wider button size */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    width: 225px; /* Increased button width */
+    text-align: center;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.btn-yes {
+    background-color: #FF9B2C;
+}
+
+.button-confirm {
+    background-color: #e6891b; /* Initial background color */
+    width: 340px; /* Increased button width */
+}
+
+/* Button Hover Effects */
+.btn-yes:hover, .button-confirm:hover {
+    background-color: #e6891b; /* Darker shade on hover */
+    transform: scale(1.05); /* Slight scaling for effect */
+}
+
+.btn-no:hover {
+    background-color: #a20707; /* Darker shade on hover */
+    transform: scale(1.05); /* Slight scaling for effect */
+}
+
+/* Footer Styles */
+.footer_section {
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #C40C0C;
+    color: white;
+    font-size: 0.9em;
+    margin-top: 20px; /* Added margin to move footer up slightly */
+}
+
+.footer-left, .footer-right {
+    display: flex;
+    align-items: center;
+}
+
+.footer-left i, .footer-left p {
+    color: white;
+    margin-right: 5px;
+}
+
+.footer-right p {
+    margin: 0;
+    color: white;
+}
