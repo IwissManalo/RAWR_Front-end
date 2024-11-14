@@ -230,6 +230,7 @@
     .review-desc {
         font-size: 13px;
         font-style: italic;
+        text-align: left;
     }
 
     /* Navigation Header */
