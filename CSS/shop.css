@@ -79,7 +79,7 @@
     
 
     .shop-details .line {
-        width: 700px;
+        width: 750px;
         height: 2px;
         background-color: #000000;
         margin: 20px auto;
@@ -220,7 +220,6 @@
 
     .review-desc {
         font-size: 13px;
-        color: #555;
         font-style: italic;
     }
 
@@ -269,6 +268,23 @@
         justify-content: space-between;
     }
 
+    .nav-btn{
+        background-color: white;
+        color: black;
+        border: none;
+        padding: 10px 80px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 1em;
+        display: inline-block;
+        transition: 0.3s;
+    }
+    
+    .nav-btn:hover {
+        color: #ffffff;
+        background-color: #009C03;
+    }
     /* Sidebar Menu */
     .wrapper {
         position: fixed;
@@ -343,7 +359,7 @@
     }
     
     .wrapper ul li a:hover {
-        color: #C50C0C;
+        color: #FF9B2C;
     }
     
     input[type="checkbox"] {
@@ -435,14 +451,13 @@
 
 .services ul li {
     font-size: 16px; /* Adjust font size */
-    color: #555;
     margin: 10px 0;
 }
 
-/* Hide the edit button and logo when the menu is active */
-/* Hide the logo, title, and edit button when the menu is active */
 #active:checked ~ .nav-header .nav-left .nav-logo,
 #active:checked ~ .nav-header .nav-left .nav-title-red,
-#active:checked ~ .nav-header .nav-right .edit-shop-btn {
-    display: none;
+#active:checked ~ .nav-header .nav-right .nav-btn {
+    opacity: 0;               
+    visibility: hidden;      
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
 }
