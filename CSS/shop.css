@@ -29,6 +29,10 @@
         margin-top: 30px;
     }
 
+    .profile-section {
+        text-align: center;
+    }    
+
     .profile-container {
         display: inline-block;
         width: 200px;
@@ -36,7 +40,7 @@
         border-radius: 50%;
         overflow: hidden;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px;
+        margin: 0px 0px 20px 60px; 
     }
 
     .profile-img {
@@ -55,59 +59,66 @@
     .shop-details {
         text-align: center;
         margin-top: -40px;
-        margin-left: 150px;
+        margin-left: 50px;
     }
     
     .shop-title-container {
         display: flex;
-        align-items: center; /* Aligns the text and icon vertically */
-        justify-content: center; /* Center both the text and icon horizontally */
+        align-items: center;
+        padding-left: 180px;
     }
     
     .shop-title-container h2 {
         font-size: 32px;
         font-weight: bold;
         color: #FF6500;
-        margin-right: 10px; /* Adds a little space between the text and the icon */
+        margin-right: 10px; 
     }
     
     .lock-icon {
-        font-size: 32px; /* Matches the size of the title */
+        font-size: 32px; 
         color: #000000;
         margin-right: 15px;
     }
     
-
     .shop-details .line {
-        width: 750px;
+        width: 820px;
+        height: 2px;
+        background-color: #000000;
+        margin: 20px 10px 20px auto;
+    }
+
+    .line-wrapper {
+        text-align: center;
+    }
+    
+    .line {
+        width: 800px;
         height: 2px;
         background-color: #000000;
         margin: 20px auto;
     }
+    
     .shop-info {
         display: flex;
-        justify-content: space-between;  /* This ensures the two elements are aligned */
+        justify-content: space-between;  
         font-size: 15px;
-        color: #333;
-        margin: 5px 0;  /* Space between lines */
+        margin: 0px 0px; 
     }
     
     .address {
-        flex: 1;  
-        margin-right:90px/* Ensures these elements take up equal space */
+        margin-left: 110px;
     }
     .working-hours{
-        flex: 1;
-        margin-right:150px ;
+        margin-left: 110px;
+        font-weight: bold;
     }
     
     .email {
-        margin-left: 20px;
-        margin-right:32px; /* Adjust the gap between the two parts */
+        margin-right: 9px;
     }
     .contact{
-        margin-right:-10px ;
-        margin-right:24px; 
+        margin-right: 9px;
     }
     
     .payment-methods {
@@ -124,13 +135,11 @@
     }
     
     .gcash-logo {
-        width: 30px;  /* Adjust size as necessary */
+        width: 30px;
         height: auto;
         border-radius: 10px;
     }
     
-    
-
     .shop-details p {
         font-size: 15px;
         color: #333;
@@ -147,8 +156,8 @@
         text-align: center;
         background-color: #FF9B2C;
         border-radius: 10px;
-        max-height: 750px;  /* Adjust height for scroll */
-        overflow-y: auto;  /* Enable vertical scrolling */
+        max-height: 710px; 
+        overflow-y: auto;
     }
     
 
@@ -157,25 +166,25 @@
         align-items: center; /* Aligns the stars and the heading vertically */
         justify-content: center; /* Centers the content horizontally */
         font-size: 10px;
-        
     }
+
     .rating{
         font-size: 13px;
-        margin-bottom:15px;
-        margin-right:133px;
+        margin-bottom: 15px;
+        margin-right: 133px;
     }
+    
     .reviews-heading h2 {
         font-size: 22px;
         margin-top: 10px;
         color:#0c0c0c;
-        margin-right: 10px; /* Space between the heading and the stars */
+        margin-right: 10px; 
     }
 
     .reviews-heading .stars {
         color: #FF6500;
-        font-size: 30px; /* Adjust size if necessary */
+        font-size: 30px;
     }
-
 
     .reviews-heading h3 {
         margin-top: 20px;
@@ -192,7 +201,7 @@
     .review-card {
         background-color: #FFC100;
         padding: 15px;
-        margin: 10px 0;
+        margin: 10px 0px;
         border-radius: 8px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         border: 2px solid #000; /* Add a black border around each review */
@@ -386,7 +395,7 @@
         background-color: #FF9B2C;
         color: white;
         font-size: 0.9em;
-        margin-top: 20px; /* Added margin to move footer up slightly */
+        margin-top: 20px;
     }
 
     .footer_section4 p {
@@ -394,64 +403,95 @@
         margin: 10px 0;
     }
 
-    /* About Us Section */
-/* Wrapper to align sections below the shop info */
 .sections-wrapper {
     display: flex;
-    justify-content: center; /* Centers both sections horizontally */
-    gap: 30px; /* Add space between the two sections */
-    margin-top: 30px; /* Space below the shop info */
+    justify-content: center; 
+    gap: 10px; 
+    margin-top: 30px;
+}
+
+.services-and-payments {
+    display: flex;
+    gap: 10px;
+}
+
+.accepted-payments {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+    background-color: #FFC100;
+    padding: 20px;
+    border: 2px solid #000;
+    width: 200px; 
+    height: 300px;
+    border-radius: 20px;
+}
+
+.accepted-payments h3 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.payment-method img {
+    width: 36px;
+    height: 36px;
 }
 
 /* About Me Section */
 .about-us {
     text-align: left;
-    margin-left: 30px;
-    background-color: #FFC100; /* Background color */
+    margin-left: 90px;
+    background-color: #FFC100;
     padding: 20px;
-    border: 2px solid #000; /* Border around the section */
-    width: 400px; 
-    height: 250px;/* Fixed width to keep the section small */
-    border-radius: 20px; /* Rounded corners */
+    border: 2px solid #000;
+    width: 310px; 
+    height: 300px;
+    border-radius: 20px;
 }
 
 .about-us h3 {
-    font-size: 18px; /* Adjust font size */
+    text-align: center;
+    font-size: 20px;
     font-weight: bold;
-    color: #333;
 }
 
 .about-us p {
-    font-size: 16px; /* Adjust font size */
-    color: #555;
+    font-size: 16px;
+    text-align: justify;
 }
 
 /* Services Section */
 .services {
-    text-align: left;
     background-color: #FFC100; /* Background color */
     padding: 20px;
     border: 2px solid #000; /* Border around the section */
-    width: 400px;
-    height: 250px; /* Fixed width to keep the section small */
+    width: 310px;
+    height: 300px; /* Fixed width to keep the section small */
     border-radius: 20px; /* Rounded corners */
 }
 
 .services h3 {
-    font-size: 18px; /* Adjust font size */
+    text-align: center;
+    font-size: 20px;
     font-weight: bold;
-    color: #333;
 }
 
 .services ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 20px 0;
+    text-align: left;
+    padding-left: 10px;
+    margin: 20px 10px;
 }
 
 .services ul li {
-    font-size: 16px; /* Adjust font size */
-    margin: 10px 0;
+    font-size: 15px;
 }
 
 #active:checked ~ .nav-header .nav-left .nav-logo,
