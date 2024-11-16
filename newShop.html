@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R.A.W.R - Shop</title>
+    <link rel="icon" type="image/x-icon" href="CSS/Images/logo.png">
+    <link href="CSS/shop.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+    <input type="checkbox" id="active" hidden>
+    <header class="nav-header">
+        <div class="nav-left">
+            <img src="CSS/Images/logo.png" alt="Icon" class="nav-logo">
+            <span class="nav-title-red">RELIABLE AUTO WORKSHOP REVOLUTION</span>
+        </div>
+        <div class="nav-right">
+            <button class="nav-btn" id="edit-shop-btn">EDIT SHOP</button>
+            <label for="active" class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+        </div>
+    </header>
+
+    <div id="edit-overlay" class="edit-overlay">
+        <div class="edit-overlay-content">
+            <h3>EDIT SHOP</h3>
+            <form>
+                <label>
+                    <input type="radio" name="visibility" value="public">
+                    Set page as public
+                </label><br>
+                <label>
+                    <input type="radio" name="visibility" value="private">
+                    Set page as private
+                </label><br>
+                <button type="button" class="delete-btn" id="delete-shop-btn">DELETE MY SHOP</button>
+                <button type="button" id="save-btn" class="save-btn">SAVE CHANGES</button>
+            </form>
+            <button type="button" class="close-btn" id="close-overlay-btn">Close</button>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">REGISTER MANAGER</a></li>
+            <li><a href="#">MY SHOPS</a></li>
+            <li><a href="#">MY PROFILE</a></li>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="FAQs.html">HELP CENTER</a></li>
+            <li><a href="#">LOG-OUT</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <section class="shop-details">
+            <section class="profile-section">
+                <div class="profile-container">
+                    <img src="CSS/Images/shop.png" alt="Shop Profile" class="profile-img">
+                </div>
+            </section>
+
+            <div class="shop-title-container">
+                <i id="visibility-icon" class="fas fa-lock lock-icon"></i>
+                <h2>DELA ROSA ULTIMATE MECHANIC SHOP</h2>
+            </div>
+            
+            <div class="line"></div>
+            <p class="shop-info">
+                <span class="address">Address</span>
+                <span class="email">Email</span>
+            </p>
+            <p class="shop-info">
+                <span class="working-hours"> Work Hours</span>
+                <span class="contact">Contact Number</span>
+            </p>
+            
+            <div class="sections-wrapper">
+                <section class="about-us">
+                    <h3>About Us</h3><br>
+                </section>
+            
+                <section class="services-and-payments">
+                    <div class="services">
+                        <h3>Services We Offer</h3>
+                    </div>
+            
+                    <div class="accepted-payments">
+                        <h3>Accepted Payments</h3>
+                    </div>
+                </section>
+            </div>
+            
+        </section>
+
+        <section class="reviews-section">
+            <div class="reviews-heading">
+                <h2>RATING</h2>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div><br><br>
+            </div>
+            <h3 class="rating">0 out of 5</h3>
+        </section>
+    </div>
+
+    <footer class="footer_section">
+        <div>
+            <p>
+                <i class="fas fa-envelope"></i>
+                rawrofficial@gmail.com
+            </p>
+        </div>
+        <p>
+            Copyright &copy; 2024 All Rights Reserved. Design by Irish Manalo & Ralph Vicente
+        </p>
+    </footer>  
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const editShopBtn = document.getElementById("edit-shop-btn");
+        const overlay = document.getElementById("edit-overlay");
+        const closeOverlayBtn = document.getElementById("close-overlay-btn");
+        const deleteShopBtn = document.getElementById("delete-shop-btn");
+        const visibilityIcon = document.getElementById("visibility-icon");
+        const publicRadio = document.querySelector('input[name="visibility"][value="public"]');
+        const privateRadio = document.querySelector('input[name="visibility"][value="private"]');
+            
+            // Show the overlay
+            editShopBtn.addEventListener("click", () => {
+                overlay.style.display = "flex";
+            });
+            
+            // Close the overlay
+            closeOverlayBtn.addEventListener("click", () => {
+                overlay.style.display = "none";
+            });
+            
+            // Handle "DELETE MY SHOP" button click
+            deleteShopBtn.addEventListener("click", () => {
+                const confirmDelete = confirm("Are you sure you want to delete your shop?");
+                if (confirmDelete) {
+                    alert("Your shop has been deleted.");
+                    overlay.style.display = "none";
+                }
+            });
+            
+            // Change icon when visibility is toggled
+            publicRadio.addEventListener("change", () => {
+                if (publicRadio.checked) {
+                    visibilityIcon.classList.remove("fas", "fa-lock");
+                    visibilityIcon.classList.add("fas", "fa-globe");  // Replace with the public logo icon
+                }
+            });
+    
+            privateRadio.addEventListener("change", () => {
+                if (privateRadio.checked) {
+                    visibilityIcon.classList.remove("fas", "fa-globe");
+                    visibilityIcon.classList.add("fas", "fa-lock");  // Revert to lock icon
+                }
+            });
+        });
+    
+        </script>  
+    </body>
+    </html>
+
