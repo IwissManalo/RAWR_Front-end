@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R.A.W.R - Shop</title>
+    <link rel="icon" type="image/x-icon" href="CSS/Images/logo.png">
+    <link href="CSS/shop.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+    <input type="checkbox" id="active" hidden>
+    <header class="nav-header">
+        <div class="nav-left">
+            <img src="CSS/Images/logo.png" alt="Icon" class="nav-logo">
+            <span class="nav-title-red">RELIABLE AUTO WORKSHOP REVOLUTION</span>
+        </div>
+        <div class="nav-right">
+            <button class="nav-btn" id="modify-shop-btn">MODIFY SHOP</button>
+            <label for="active" class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+        </div>
+    </header>
+
+    <div id="modify-overlay" class="edit-overlay">
+        <div class="edit-overlay-content">
+            <h3>ARE YOU SURE YOU WANT TO HIDE THIS RATING?</h3>
+            <form>
+                <label for="hide-description">Reason for hiding this review:</label><br>
+                <textarea id="hide-description" name="hide-description" placeholder="Indicate here why"></textarea><br><br>
+                <button type="button" class="cancel-btn" id="cancel-btn">Cancel</button>
+                <button type="button" class="submit-btn" id="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">REGISTER MANAGER</a></li>
+            <li><a href="#">MY SHOPS</a></li>
+            <li><a href="#">MY PROFILE</a></li>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="FAQs.html">HELP CENTER</a></li>
+            <li><a href="#">LOG-OUT</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <section class="shop-details">
+            <section class="profile-section">
+                <div class="profile-container">
+                    <img src="CSS/Images/shop.png" alt="Shop Profile" class="profile-img">
+                </div>
+            </section>
+
+            <div class="shop-title-container">
+                <i id="visibility-icon" class="fas fa-lock lock-icon"></i>
+                <h2>DELA ROSA ULTIMATE MECHANIC SHOP</h2>
+            </div>
+            
+            <div class="line"></div>
+            <p class="shop-info">
+                <span class="address">123 DELA ROSA STREET, Makati City, Philippines</span>
+                <span class="email">Email: delarosaauto@gmail.com</span>
+            </p>
+            <p class="shop-info">
+                <span class="working-hours">Monday to Saturday: 8:00 AM - 6:00 PM</span>
+                <span class="contact">Contact number: (0912) 345-6789</span>
+            </p>
+            
+            <div class="sections-wrapper">
+                <section class="about-us">
+                    <h3>About Us</h3><br>
+                    <p>At Dela Rosa Mechanic Shop, we specialize in providing expert vehicle repair and maintenance services for all types of motorcycles and cars. Our certified mechanics ensure top-quality service to get you back on the road safely.</p>
+                </section>
+            
+                <section class="services-and-payments">
+                    <div class="services">
+                        <h3>Services We Offer</h3>
+                        <ul>
+                            <li>General repairs and tune-ups</li>
+                            <li>Oil change and engine diagnostics</li>
+                            <li>Brake and clutch system maintenance</li>
+                            <li>Tire replacement and balancing</li>
+                            <li>Electrical troubleshooting</li>
+                        </ul>
+                    </div>
+            
+                    <div class="accepted-payments">
+                        <h3>Accepted Payments</h3>
+                        <div class="payment-method">
+                            <img src="CSS/Images/cash.png" alt="Credit Card Icon">
+                            <span>Cash</span>
+                        </div>
+                        <div class="payment-method">
+                            <img src="CSS/Images/card.png" alt="Debit Card Icon">
+                            <span>Online Bank</span>
+                        </div>
+                        <div class="payment-method">
+                            <img src="CSS/Images/gcash.png" alt="Cash Icon">
+                            <span>Gcash</span>
+                        </div>
+                        <div class="payment-method">
+                            <img src="CSS/Images/visa.png" alt="E-Wallet Icon">
+                            <span>Card</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+        </section>
+
+        <section class="reviews-section">
+            <div class="reviews-heading">
+                <h2>RATING</h2>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div><br><br>
+            </div>
+            <h3 class="rating">4.0 out of 5</h3>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="customer-name">
+                        <span>Customer 1</span>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>               
+                </div>
+                <p class="review-desc">I like this shop! Very accommodating and friendly staff. Definitely coming back again!</p>
+                <button class="hide-btn" style="display:none;">Hide</button> 
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="customer-name">
+                        <span>Customer 2</span>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <button class="hide-btn" style="display:none;">Hide</button> 
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="customer-name">
+                        <span>Customer 3</span>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <p class="review-desc">The mechanics are skilled, but the pricing was a little higher than expected.</p>
+                <button class="hide-btn" style="display:none;">Hide</button> 
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="customer-name">
+                        <span>Customer 4</span>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <button class="hide-btn" style="display:none;">Hide</button> 
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="customer-name">
+                        <span>Customer 5</span>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <button class="hide-btn" style="display:none;">Hide</button> 
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="customer-name">
+                        <span>Customer 6</span>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <p class="review-desc">Fantastic service! The mechanics were quick and did an excellent job.</p>
+                <button class="hide-btn" style="display:none;">Hide</button> 
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="customer-name">
+                        <span>Customer 7</span>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>    
+                <p class="review-desc">Decent work, but I would appreciate more transparent pricing upfront.</p>
+                <button class="hide-btn" style="display:none;">Hide</button> 
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="customer-name">
+                        <span>Customer 8</span>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>    
+                <p class="review-desc">Decent work, but I would appreciate more transparent pricing upfront.</p>
+                <button class="hide-btn" style="display:none;">Hide</button> 
+            </div>
+
+        </section>
+    </div>
+
+    <footer class="footer_section">
+        <div>
+            <p>
+                <i class="fas fa-envelope"></i>
+                rawrofficial@gmail.com
+            </p>
+        </div>
+        <p>
+            Copyright &copy; 2024 All Rights Reserved. Design by Irish Manalo & Ralph Vicente
+        </p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const modifyShopBtn = document.getElementById("modify-shop-btn");
+            const overlay = document.getElementById("modify-overlay");
+            const closeOverlayBtn = document.getElementById("close-overlay-btn");
+            const cancelBtn = document.getElementById("cancel-btn");
+            const submitBtn = document.getElementById("submit-btn");
+            const hideBtns = document.querySelectorAll(".hide-btn");
+            const reviewCards = document.querySelectorAll(".review-card");
+            
+            hideBtns.forEach((btn, index) => {
+                btn.addEventListener("click", () => {
+                    overlay.style.display = "flex";
+                    overlay.setAttribute('data-review-index', index);
+                });
+            });
+    
+            modifyShopBtn.addEventListener("click", () => {
+                if (modifyShopBtn.innerText === "MODIFY SHOP") {
+                    modifyShopBtn.innerText = "SAVE CHANGES";
+                    hideBtns.forEach(btn => {
+                        btn.style.display = "inline-block";
+                    });
+                } else {
+                    modifyShopBtn.innerText = "MODIFY SHOP";
+                    hideBtns.forEach(btn => {
+                        btn.style.display = "none";
+                    });
+                }
+            });
+    
+            cancelBtn.addEventListener("click", () => {
+                overlay.style.display = "none";
+            });
+    
+            submitBtn.addEventListener("click", () => {
+                const description = document.getElementById("hide-description").value;
+                const reviewIndex = overlay.getAttribute('data-review-index');
+                console.log(`Hiding review ${reviewIndex} for reason: ${description}`);
+                
+                reviewCards[reviewIndex].style.display = "none";
+                
+                overlay.style.display = "none";
+            });
+        });
+    </script>
+    
+    </body>
+    </html>
+
