@@ -1131,7 +1131,7 @@ input[type="checkbox"] {
 }
 
 .registerShop-section input[type="email"],
-.registerShop-section input[type="password"] {
+.registerShop-section input[type="text"] {
   width: 100%;
   max-width: 400px;
   padding: 10px;
@@ -1223,8 +1223,8 @@ input[type="checkbox"] {
 }
 
 .button {
-  display: block; /* Ensure the button behaves like a block element for centering */
-  margin: 0 auto; /* Centers the button horizontally */
+  display: block; 
+  margin: 0 auto; 
   padding: 10px 20px;
   background-color: #FF9B2C;
   color: white;
@@ -1232,9 +1232,9 @@ input[type="checkbox"] {
   font-weight: bold;
   border-radius: 5px;
   width: 400px;
-  margin-bottom:86px;
+  margin-bottom:87px;
   cursor: pointer;
-  text-align: center; /* Ensures the text inside the button is centered */
+  text-align: center;
   transition: background-color 0.3s ease;
 }
 
