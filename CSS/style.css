@@ -1096,4 +1096,150 @@ input[type="checkbox"] {
   margin: 0;
   color: #000000;
 }
+
+
 /* FOOTER END - ADMIN VERSION */
+
+/* REGISTER SHOP START */
+
+/* LOG-IN START */
+
+.registerShop-section {
+  margin: 90px 0px 0px 0px;
+  text-align: center;
+  padding: 20px;
+}
+
+.login-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.registerShop-section p,
+.registerShop-section input[type="email"],
+.registerShop-section input[type="password"],
+.registerShop-section button {
+  font-size: 0.9em;
+}
+
+.registerShop-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.registerShop-section input[type="email"],
+.registerShop-section input[type="password"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  background-color: #D9D9D9; 
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.registerShop-section button {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 20px;
+  background-color: #FF9B2C;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.registerShop-section button:hover {
+  background-color: #C50C0C;
+}
+
+.registerShop-section a {
+  text-decoration: underline;
+}
+
+.file-upload-section {
+  margin-top: 10px;
+  width: 400px;
+}
+
+.file-upload-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #cccccc;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.file-upload-box .file-logo {
+  font-size: 30px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.file-upload-box p {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.file-upload-box button {
+  background-color: #FF9B2C;
+  color: #ffffff; 
+  border: #000000;
+  padding: 10px 20px;
+  font-size: 14px;
+  
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.file-upload-box button:hover {
+  background-color: #C40C0C;
+  color: #FFFFFF;
+}
+
+.submit-button{
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 20px;
+  font-weight: bold;
+  background-color: #FF9B2C;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #C50C0C;
+}
+
+.button {
+  display: block; /* Ensure the button behaves like a block element for centering */
+  margin: 0 auto; /* Centers the button horizontally */
+  padding: 10px 20px;
+  background-color: #FF9B2C;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 400px;
+  margin-bottom:86px;
+  cursor: pointer;
+  text-align: center; /* Ensures the text inside the button is centered */
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #C50C0C;
+}
+
+/* REGISTER SHOP END */

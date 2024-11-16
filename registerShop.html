@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R.A.W.R - Register Shop</title>
+    <link rel="icon" type="image/x-icon" href="CSS/Images/logo.png">
+    <link href="CSS/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+    <input type="checkbox" id="active" hidden>
+    <header class="nav-header">
+        <div class="nav-left">
+            <img src="CSS/Images/logo.png" alt="Icon" class="nav-logo">
+            <span class="nav-title-red">RELIABLE AUTO WORKSHOP REVOLUTION</span>
+        </div>
+        <div class="nav-right">
+            <label for="active" class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">REGISTER</a></li>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="FAQs.html">HELP CENTER</a></li>
+        </ul>
+    </div>
+    
+    <br><br>
+    <div class="registerShop-section">
+        <h1 class="registerShop-title">BECOME A SHOP OWNER</h1>
+        <p>Register your Shop
+      
+        </p><br>
+    
+        <form action="#" method="post">
+            <input type="email" id="email" name="email" placeholder="Shop Name" required>
+            
+            <input type="password" id="password" name="password" placeholder="Shop Address" required>
+                <div class="file-upload-section">
+                  <div class="file-upload-box">
+                    <div class="file-logo">📁</div>
+                    <p>Choose a file or drag & drop it here</p>
+                    <input type="file" id="file-input" hidden>
+                    <button type="button" onclick="document.getElementById('file-input').click()">BROWSE FILE</button>
+                  </div>
+                </div>
+              </div>
+              <button class="button">
+                SUBMIT APPLICATION
+            </button>
+        </form>
+    </div>
+    
+    <footer class="footer_section">
+        <div>
+            <p>
+                <i class="fas fa-envelope"></i>
+                rawrofficial@gmail.com
+            </p>
+        </div>
+        
+        <p>
+            Copyright &copy; 2024 All Rights Reserved. Design by Irish Manalo & Ralph Vicente
+        </p>
+    </footer>
+
+</body>
+</html>
