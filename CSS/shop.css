@@ -22,7 +22,6 @@
 
     }
 
-    /* Profile Image and Title Section */
     .profile-title-section {
         text-align: center;
         width: 100%;
@@ -163,8 +162,8 @@
 
     .reviews-heading {
         display: flex;
-        align-items: center; /* Aligns the stars and the heading vertically */
-        justify-content: center; /* Centers the content horizontally */
+        align-items: center;
+        justify-content: center; 
         font-size: 10px;
     }
 
@@ -501,4 +500,90 @@
     opacity: 0;               
     visibility: hidden;      
     transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+
+/* Overlay for Edit/Modify Shop */
+.edit-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000099;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.edit-overlay-content {
+    background: #ffa500;
+    padding: 30px; 
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+.edit-overlay-content h3 {
+    margin-bottom: 1px;
+    font-size: 20px;
+    color: #000;
+}
+
+label {
+    font-size: 16px;
+    display: block;
+    margin: 0;
+    line-height: 0.4; 
+}
+
+.delete-btn {
+    background: #C40C0C;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.delete-btn:hover {
+    background: #a00a0a;
+}
+
+.save-btn {
+    background: #009C03;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+}
+
+.save-btn:hover {
+    background: #2b6c2e;
+}
+
+.close-btn {
+    background: #FF6500;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto;
+    align-self: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.close-btn:hover {
+    background: #bc4b00;
 }
