@@ -18,12 +18,31 @@
             <span class="nav-title-red">RELIABLE AUTO WORKSHOP REVOLUTION</span>
         </div>
         <div class="nav-right">
-            <button class="nav-btn">EDIT SHOP</button>
+            <button class="nav-btn" id="edit-shop-btn">EDIT SHOP</button>
             <label for="active" class="menu-btn">
                 <i class="fas fa-bars"></i>
             </label>
         </div>
     </header>
+
+    <div id="edit-overlay" class="edit-overlay">
+        <div class="edit-overlay-content">
+            <h3>EDIT SHOP</h3>
+            <form>
+                <label>
+                    <input type="radio" name="visibility" value="public">
+                    Set page as public
+                </label><br>
+                <label>
+                    <input type="radio" name="visibility" value="private">
+                    Set page as private
+                </label><br>
+                <button type="button" class="delete-btn" id="delete-shop-btn">DELETE MY SHOP</button>
+                <button type="button" id="save-btn" class="save-btn">SAVE CHANGES</button>
+            </form>
+            <button type="button" class="close-btn" id="close-overlay-btn">Close</button>
+        </div>
+    </div>
 
     <div class="wrapper">
         <ul>
@@ -44,11 +63,12 @@
                     <img src="CSS/Images/shop.png" alt="Shop Profile" class="profile-img">
                 </div>
             </section>
+
             <div class="shop-title-container">
-                <i class="fas fa-lock lock-icon"></i>
+                <i id="visibility-icon" class="fas fa-lock lock-icon"></i>
                 <h2>DELA ROSA ULTIMATE MECHANIC SHOP</h2>
-                
             </div>
+            
             <div class="line"></div>
             <p class="shop-info">
                 <span class="address">123 DELA ROSA STREET, Makati City, Philippines</span>
@@ -253,6 +273,53 @@
             Copyright &copy; 2024 All Rights Reserved. Design by Irish Manalo & Ralph Vicente
         </p>
     </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const editShopBtn = document.getElementById("edit-shop-btn");
+    const overlay = document.getElementById("edit-overlay");
+    const closeOverlayBtn = document.getElementById("close-overlay-btn");
+    const deleteShopBtn = document.getElementById("delete-shop-btn");
+    const visibilityIcon = document.getElementById("visibility-icon");
+    const publicRadio = document.querySelector('input[name="visibility"][value="public"]');
+    const privateRadio = document.querySelector('input[name="visibility"][value="private"]');
+        
+        // Show the overlay
+        editShopBtn.addEventListener("click", () => {
+            overlay.style.display = "flex";
+        });
+        
+        // Close the overlay
+        closeOverlayBtn.addEventListener("click", () => {
+            overlay.style.display = "none";
+        });
+        
+        // Handle "DELETE MY SHOP" button click
+        deleteShopBtn.addEventListener("click", () => {
+            const confirmDelete = confirm("Are you sure you want to delete your shop?");
+            if (confirmDelete) {
+                alert("Your shop has been deleted.");
+                overlay.style.display = "none";
+            }
+        });
+        
+        // Change icon when visibility is toggled
+        publicRadio.addEventListener("change", () => {
+            if (publicRadio.checked) {
+                visibilityIcon.classList.remove("fas", "fa-lock");
+                visibilityIcon.classList.add("fas", "fa-globe");  // Replace with the public logo icon
+            }
+        });
+
+        privateRadio.addEventListener("change", () => {
+            if (privateRadio.checked) {
+                visibilityIcon.classList.remove("fas", "fa-globe");
+                visibilityIcon.classList.add("fas", "fa-lock");  // Revert to lock icon
+            }
+        });
+    });
+
+    </script>    
 
     </body>
     </html>
