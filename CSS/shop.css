@@ -218,7 +218,6 @@
     .customer-name {
         font-size: 18px;
         font-weight: bold;
-        color: #333;
     }
 
     .stars i {
@@ -228,7 +227,6 @@
 
     .review-desc {
         font-size: 13px;
-        font-style: italic;
         text-align: left;
     }
 
@@ -532,6 +530,67 @@
     margin-bottom: 1px;
     font-size: 20px;
     color: #000;
+}
+
+.hide-btn {
+    display: none;
+    background-color: #C40C0C;
+    color: white;
+    font-size: 14px;
+    margin-top: 15px;
+    padding: 7px 110px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hide-btn:hover {
+    background-color: #a00a0a;
+}
+
+#hide-description {
+    width: 100%;
+    height: 180px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    resize: none;
+}
+
+/* Cancel button */
+.cancel-btn {
+    background: #C40C0C;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto;
+    align-self: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.cancel-btn:hover {
+    background-color: #a00a0a;
+}
+
+/* Submit button */
+.submit-btn {
+    background: #009C03;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto;
+    align-self: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.submit-btn:hover {
+    background-color: #2b6c2e;
 }
 
 label {
