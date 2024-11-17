@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R.A.W.R - Registration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/buttonRegistration.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+    <input type="checkbox" id="active" hidden>
+    <header class="nav-header">
+        <div class="nav-left">
+            <img src="CSS/Images/logo.png" alt="Icon" class="nav-logo">
+            <span class="nav-title-red">RELIABLE AUTO WORKSHOP REVOLUTION</span>
+        </div>
+        <div class="nav-right">
+            <label for="active" class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">REGISTER</a></li>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="FAQs.html">HELP CENTER</a></li>
+        </ul>
+    </div>
+     <h1 class = "title">ACCOUNT REGISTRATION</h1>
+     <h1 class="sub-title">
+        Already a R.A.W.R Member? 
+        <a href="#" class="login-link">Log-in</a>
+    </h1>
+    
+    <div class="rawr-body-wrapper">
+
+        
+        <div class="rawr-registration-container">
+            <h2 class="registration-title">REGISTER AS CUSTOMER</h2><br>
+            <h2 class="registration-title2">REGISTER AS SHOP OWNER</h2>
+            <!-- Left Section (Customer Registration) -->
+            <div id="customer-registration" class="rawr-section left active">
+                <br>
+                <h1>CUSTOMER REGISTRATION</h1><br><br>
+                <form class="rawr-form">
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <input type="tel" placeholder="Phone Number" required>
+                    <button type="button">REGISTER</button>
+                </form>
+                <button class="rawr-switch-btn" onclick="switchToShopOwner()">Switch to Shop Owner</button>
+            </div>
+            
+            <div id="shop-owner-registration" class="rawr-section right overlay">
+                <br>
+                <h1>SHOP OWNER REGISTRATION</h1><br><br>
+                <form class="rawr-form">
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <input type="tel" placeholder="Phone Number" required>
+                    <button type="button">REGISTER</button>
+                </form>
+                <button class="rawr-switch-btn" onclick="switchToCustomer()">Switch to Customer</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+      const customerSection = document.getElementById('customer-registration');
+const shopOwnerSection = document.getElementById('shop-owner-registration');
+const customerSwitchBtn = customerSection.querySelector('.rawr-switch-btn');
+const shopOwnerSwitchBtn = shopOwnerSection.querySelector('.rawr-switch-btn');
+
+function switchToShopOwner() {
+    customerSection.classList.remove('active');
+    customerSection.classList.add('overlay');
+    shopOwnerSection.classList.remove('overlay');
+    shopOwnerSection.classList.add('active');
+    
+    // Move the button to the shop owner section
+    customerSwitchBtn.style.display = 'none';  // Hide the customer button
+    shopOwnerSwitchBtn.style.display = 'block'; // Show the shop owner button
+}
+
+function switchToCustomer() {
+    shopOwnerSection.classList.remove('active');
+    shopOwnerSection.classList.add('overlay');
+    customerSection.classList.remove('overlay');
+    customerSection.classList.add('active');
+    
+    // Move the button to the customer section
+    shopOwnerSwitchBtn.style.display = 'none'; // Hide the shop owner button
+    customerSwitchBtn.style.display = 'block'; // Show the customer button
+}
+const navWrapper = document.querySelector('.wrapper');
+const checkbox = document.getElementById('active');
+
+// When clicking anywhere inside the wrapper, close the menu
+navWrapper.addEventListener('click', function(event) {
+    // Check if the click is inside the menu or the burger icon
+    if (!event.target.closest('.menu-btn') && checkbox.checked) {
+        checkbox.checked = false; // Uncheck the checkbox to close the nav
+    }
+});
+    </script>
+
+    <footer class="footer_section">
+        <div>
+            <p>
+                <i class="fas fa-envelope"></i>
+                rawrofficial@gmail.com
+            </p>
+        </div>
+        
+        <p>
+            Copyright &copy; 2024 All Rights Reserved. Design by Irish Manalo & Ralph Vicente
+        </p>
+    </footer>
+
+</body>
+</html>
