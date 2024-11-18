@@ -1243,3 +1243,64 @@ input[type="checkbox"] {
 }
 
 /* REGISTER SHOP END */
+
+/* REVIEW SHOP START */
+.shop-details-section {
+  display: flex;
+  justify-content:space-evenly;
+  padding: 20px;
+  margin: 80px 10px 10px 10px;
+  border-radius: 10px; 
+}
+
+.shop-left {
+  width: 100%;
+  background-color: #FFC100;
+  padding: 30px; 
+}
+
+.shop-right {
+  width: 100%;
+  height: auto;
+  background-color: #FF9B2C;
+  padding: 30px; 
+}
+
+.shop-left h2, .shop-right h2 {
+  font-size: 27px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.shop-left h3, .shop-right h3 {
+  font-size: 20px;
+}
+
+.shop-left p, .shop-right p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.shop-left label{
+  font-size: 20px;
+}
+
+.document-scrollable {
+  height: 440px; 
+  overflow-y: auto;
+}
+
+.document-photo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.document-img {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+/* REVIEW SHOP END */
