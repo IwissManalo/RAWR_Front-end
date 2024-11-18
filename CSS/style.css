@@ -498,6 +498,12 @@ input[type="checkbox"] {
   position: relative;
 }
 
+.map-layout {
+  display: flex;
+  width: 100%;
+  height: 600px;
+}
+
 .map_container {
   position: relative;
   width: 100%;
@@ -518,6 +524,12 @@ input[type="checkbox"] {
   height: 100%;
 }
 
+.map-responsive-registered {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 .map_container iframe {
   border: 0;
   width: 100%;
@@ -532,6 +544,74 @@ input[type="checkbox"] {
   width: 100%;
   height: 100%;
   transition: filter 0.3s ease-in-out;
+}
+.button-container {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #f4f4f4;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.button-container button {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  background-color: #FF9B2C;
+  color: white;
+  transition: background-color 0.3s ease-in-out;
+  margin: 0;
+}
+
+.button-container button:hover {
+  background-color: #C40C0C;
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.button-content img {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  border-radius: 50%; 
+}
+
+.shop-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.shop-name {
+  text-align: left;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.shop-location {
+  text-align: left;
+  font-size: 13px;
+}
+
+.button-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.button-container::-webkit-scrollbar-thumb {
+  background: #FF6500;
+}
+
+.button-container::-webkit-scrollbar-thumb:hover {
+  background: #C50C0C;
 }
 
 .content-overlay {
@@ -1288,6 +1368,14 @@ input[type="checkbox"] {
 .document-scrollable {
   height: 440px; 
   overflow-y: auto;
+}
+
+.document-scrollable::-webkit-scrollbar {
+  width: 10px;
+}
+
+.document-scrollable::-webkit-scrollbar-thumb {
+  background: #C50C0C;
 }
 
 .document-photo {
