@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R.A.W.R - Admin Home Page</title>
+    <link rel="icon" type="image/x-icon" href="CSS/Images/logo.png">
+    <link href="CSS/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+    <input type="checkbox" id="active" hidden>
+    <header class="nav-header">
+        <div class="nav-left">
+            <img src="CSS/Images/logo.png" alt="Icon" class="nav-logo">
+            <span class="nav-title">RELIABLE AUTO WORKSHOP REVOLUTION</span>
+        </div>
+        <div class="nav-right">
+            <button class="nav-btn">ADMIN PORTAL</button>
+            <label for="active" class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content-registered">
+            <h1>Welcome to R.A.W.R</h1>
+            <p>
+                Presenting our groundbreaking system, meticulously crafted by a team of enterprising second-year students, dedicated to revolutionizing the landscape of car repair and management. Engineered with cutting-edge diagnostics, it empowers users with real-time tracking capabilities and invaluable insights, thereby optimizing maintenance procedures and significantly prolonging the lifespan of your vehicle. Immerse yourself in a realm of unparalleled convenience and excellence in automotive care with our innovative solution.
+            </p>
+
+        <!-- Search Bar-->
+        <form action="#" method="GET" class="search-form">
+            <div class="search-input-wrapper">
+                <input type="text" id="search" name="search" placeholder="Search a location" class="search-input">
+                <i class="fas fa-search search-icon"></i> 
+            </div>
+            <button type="submit" class="search-btn">
+                <i class="fas fa-map-marker-alt"></i>
+            </button>
+        </form>
+
+        </div>
+    </section>
+
+    <section class="map-section">
+        <!-- Container for Map and Buttons -->
+        <div class="map-layout">
+            <!-- Google Map Embed -->
+            <div class="map_container-registered">
+                <div class="map-responsive-registered">
+                    <iframe 
+                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=CEU+Makati+Esteban+St+Philippines" 
+                        frameborder="0" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+    
+            <div class="button-container">
+                <button>
+                    <div class="button-content">
+                        <img src="CSS/Images/shop.png" alt="Shop Icon">
+                        <div class="shop-details">
+                            <span class="shop-name">Dela Rosa Ultimate</span>
+                            <span class="shop-location">Dela Rosa, Makati City</span>
+                        </div>
+                    </div>
+                </button>
+                <button>
+                    <div class="button-content">
+                        <img src="CSS/Images/shop.png" alt="Shop Icon">
+                        <div class="shop-details">
+                            <span class="shop-name">Tokyo Cars Repair Shop</span>
+                            <span class="shop-location">Banawe Street, Quezon City</span>
+                        </div>
+                    </div>
+                </button>
+                <button>
+                    <div class="button-content">
+                        <img src="CSS/Images/shop.png" alt="Shop Icon">
+                        <div class="shop-details">
+                            <span class="shop-name">Rapide Auto Service Experts</span>
+                            <span class="shop-location">Makati Avenue, Makati City</span>
+                        </div>
+                    </div>
+                </button>
+                <button>
+                    <div class="button-content">
+                        <img src="CSS/Images/shop.png" alt="Shop Icon">
+                        <div class="shop-details">
+                            <span class="shop-name">Glenn’s Auto Repair</span>
+                            <span class="shop-location">West Avenue, Quezon City</span>
+                        </div>
+                    </div>
+                </button>
+                <button>
+                    <div class="button-content">
+                        <img src="CSS/Images/shop.png" alt="Shop Icon">
+                        <div class="shop-details">
+                            <span class="shop-name">FixIt Auto Repair</span>
+                            <span class="shop-location">Ortigas Avenue, Pasig City</span>
+                        </div>
+                    </div>
+                </button>
+                <button>
+                    <div class="button-content">
+                        <img src="CSS/Images/shop.png" alt="Shop Icon">
+                        <div class="shop-details">
+                            <span class="shop-name">JVS Auto Repair Shop</span>
+                            <span class="shop-location"> Quirino Avenue, Parañaque City</span>
+                        </div>
+                    </div>
+                </button>
+                <button>
+                    <div class="button-content">
+                        <img src="CSS/Images/shop.png" alt="Shop Icon">
+                        <div class="shop-details">
+                            <span class="shop-name">AutoServ Car Repair Center</span>
+                            <span class="shop-location">Taft Avenue, Manila City</span>
+                        </div>
+                    </div>
+                </button>
+                <button>
+                    <div class="button-content">
+                        <img src="CSS/Images/shop.png" alt="Shop Icon">
+                        <div class="shop-details">
+                            <span class="shop-name">SpeedyFix Automotive</span>
+                            <span class="shop-location">Shaw Boulevard, Mandaluyong City</span>
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>  
+    
+    <section class="features-section">
+        <div class="features-heading">
+            <h2>Why Choose Us?</h2>
+            <div class="line"></div>
+            <p>At R.A.W.R, we prioritize convenience, reliability, and innovation for both car owners and auto repair shops. 
+                Here's why we're your best choice:</p>
+        </div>
+    
+        <div class="features-icons">
+            <div class="icon-container">
+                <div class="icon-circle">
+                     <img src="CSS/Images/carIcon.png" alt="Icon Image" class="icon-img">
+                    <span class="icon-text">We Enhance Your Ride</span>
+                </div>
+            </div>
+            <div class="icon-container">
+                <div class="icon-circle">
+                     <img src="CSS/Images/gearIcon.png" alt="Icon Image" class="icon-img">
+                    <span class="icon-text">We Build Connections</span>
+                </div>
+            </div>
+            <div class="icon-container">
+                <div class="icon-circle">
+                     <img src="CSS/Images/pinIcon.png" alt="Icon Image" class="icon-img">
+                    <span class="icon-text">We Help You Find the Nearest Shops</span>
+                </div>
+            </div>
+            <div class="icon-container">
+                <div class="icon-circle">
+                     <img src="CSS/Images/userIcon.png" alt="Icon Image" class="icon-img">
+                    <span class="icon-text">We Elevate Your Experience</span>
+                </div>
+            </div>
+            <div class="icon-container">
+                <div class="icon-circle">
+                     <img src="CSS/Images/connectionIcon.png" alt="Icon Image" class="icon-img">
+                     <span class="icon-text">We Connect You to Your Vehicle</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="wrapper">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">REGISTER</a></li>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="FAQs.html">HELP CENTER</a></li>
+        </ul>
+    </div>
+
+    <footer class="footer_section">
+        <div>
+            <p>
+                <i class="fas fa-envelope"></i>
+                rawrofficial@gmail.com
+            </p>
+        </div>
+        
+        <p>
+            Copyright &copy; 2024 All Rights Reserved. Design by Irish Manalo & Ralph Vicente
+        </p>
+    </footer>
+
+    <!-- Google Maps JavaScript API -->
+    <script src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=CEU+Makati+Esteban+St+Philippines" async defer></script>
+    <script>
+        function initMap() {
+            const ceuLocation = { lat: 14.5589, lng: 121.0244 }; // Coordinates for CEU, Makati City
+            const map = new google.maps.Map(document.getElementById('map'), {
+                center: ceuLocation,
+                zoom: 15,
+                disableDefaultUI: true,
+                zoomControl: true 
+            });
+            
+            const marker = new google.maps.Marker({
+                position: ceuLocation,
+                map: map,
+                title: 'Centro Escolar University, Makati City'
+            });
+        }
+
+        const searchIcon = document.querySelector('.search-icon');
+        const buttonContainer = document.querySelector('.button-container');
+
+        searchIcon.addEventListener('click', (e) => {
+            e.preventDefault();
+            buttonContainer.classList.toggle('hidden'); 
+        });
+    </script>
+
+</body>
+</html>
