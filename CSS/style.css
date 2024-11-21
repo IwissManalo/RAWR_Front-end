@@ -191,6 +191,96 @@ input[type="checkbox"] {
 }
 /* NAVIGATION BURGER END - ADMIN VERSION */
 
+/* NAVIGATION BURGER START - OWNER VERSION */
+.wrapper-owner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;  
+  width: 100%;
+  background: #FF9B2C;
+  clip-path: circle(25px at calc(100% - 45px) 37px);
+  visibility: hidden; 
+  opacity: 0; 
+  transition: all 0.3s ease-in-out;
+}
+
+#active-owner:checked ~ .wrapper-owner {
+  visibility: visible;
+  opacity: 1;
+  clip-path: circle(75%);
+}
+
+.menu-btn-owner {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  padding-left: 10px;
+  font-size: 25px;
+  color: #fefdfc;
+  background-color: #FF9B2C;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  line-height: 50px;
+}
+
+#active-owner:checked ~ .nav-right-owner .menu-btn-owner i {
+  content: "\f00d";
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-btn-owner i {
+  content: "\f0c9";
+}
+
+.wrapper-owner ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+
+.wrapper-owner ul li a {
+  font-weight: bold;
+  color: none;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 20px;
+  color: #000000;
+  position: relative;
+  line-height: 50px;
+  transition: all 0.3s ease;
+}
+
+.wrapper-owner ul li a:after {
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 100%;
+  height: 50px;
+  left: 0;
+  border-radius: 50px;
+  transform: scaleY(0);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+.wrapper-owner ul li a:hover:after {
+  transform: scaleY(1);
+}
+
+.wrapper-owner ul li a:hover {
+  color: #FF9B2C;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+/* NAVIGATION BURGER END - OWNER VERSION */
+
 /* NAVIGATION HEADER START */
 .nav-header {
   position: absolute;
@@ -358,6 +448,89 @@ input[type="checkbox"] {
 }
 
 /* NAVIGATION HEADER END - ADMIN VERSION */
+
+
+/* NAVIGATION HEADER START - OWNER VERSION */
+.nav-header-owner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: rgb(0, 0, 0);
+  z-index: 10;
+  background-color: transparent; 
+}
+
+.nav-left-owner {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo-owner {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.nav-title-owner {
+  font-size: 18px;
+  font-weight: bold;
+  color: #C50C0C;
+}
+
+.nav-right-owner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #FF9B2C;
+  color: #ffffff;
+  padding: 30px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#active-owner:checked ~ .nav-header-owner .nav-logo-owner,
+#active-owner:checked ~ .nav-header-owner .nav-title-owner,
+#active-owner:checked ~ .nav-header-owner .nav-btn-owner,
+#active-owner:checked ~ .hero-section,
+#active-owner:checked ~ .map-section {
+  opacity: 0;             
+  visibility: hidden;      
+  transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+
+#active-owner:not(:checked) ~ .nav-header-owner .nav-logo-owner,
+#active-owner:not(:checked) ~ .nav-header-owner .nav-title-owner {
+  opacity: 1;           
+  visibility: visible;      
+  transition: opacity 0.3s ease, visibility 0s 0s;
+}
+
+.nav-btn-owner {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 50px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.nav-btn-owner:hover {
+  color: #fff;
+  background-color: #009C03;
+}
+
+/* NAVIGATION HEADER END - OWNER VERSION */
 
 /* HERO SECTION START */
 .hero-section {
@@ -1179,6 +1352,28 @@ input[type="checkbox"] {
 
 
 /* FOOTER END - ADMIN VERSION */
+
+/* FOOTER START - OWNER VERSION */
+.footer_section-owner {
+  background-color: #FF9B2C;
+  padding: 20px;
+  position: relative; 
+  left: 0;       
+  right: 0;       
+  bottom: 0; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;       
+}
+
+.footer_section-owner p {
+  font-size: 13px;
+  margin: 0;
+  color: #000000;
+}
+
+
+/* FOOTER END - OWNER VERSION */
 
 /* REGISTER SHOP START */
 
