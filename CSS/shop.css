@@ -692,7 +692,8 @@ background-color: #009C03;
     padding: 30px; 
     border-radius: 10px;
     text-align: center;
-    width: 300px;
+    width: 450px;
+    height: 700px;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -703,6 +704,31 @@ background-color: #009C03;
     margin-bottom: 1px;
     font-size: 20px;
     color: #000;
+}
+
+
+/* Label Styling */
+label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Input Fields Styling */
+input[type="text"], input[type="email"], input[type="radio"] {
+    padding: 10px;
+    margin: 10px 0px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+input[type="radio"] {
+    width: auto;
+    text-align: left;
+    margin-right: 10px;
 }
 
 .hide-btn {
@@ -768,9 +794,9 @@ background-color: #009C03;
 
 label {
     font-size: 16px;
-    display: block;
+    color: #000;
     margin: 0;
-    line-height: 0.4; 
+    line-height: 1.2; 
 }
 
 .delete-btn {
@@ -789,7 +815,24 @@ label {
     background: #a00a0a;
 }
 
+.edit-btn {
+    margin-bottom: 5px;
+    background: white;
+    color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+}
+
+.edit-btn:hover {
+    background: #e6e6e6;
+}
+
 .save-btn {
+    margin-bottom: 5px;
     background: #009C03;
     color: white;
     border: none;
@@ -811,11 +854,11 @@ label {
     padding: 8px 16px;
     border-radius: 5px;
     cursor: pointer;
-    width: auto;
+    width: 390px;
     align-self: center;
     transition: all 0.2s ease-in-out;
 }
 
 .close-btn:hover {
-    background: #bc4b00;
+    background: #cf5300;
 }
