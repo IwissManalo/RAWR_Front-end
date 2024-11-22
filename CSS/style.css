@@ -1653,3 +1653,87 @@ input[type="checkbox"] {
   color: #C40C0C;
 }
 /* PROFILE SECTION END */
+
+/* REGISTER MANAGER START */
+.manager-registration {
+  max-width: 600px;
+  margin: 153px auto;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.register-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-row input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  background-color: #f8f8f8;
+}
+
+.form-row input:focus {
+  border-color: #ff4500;
+}
+
+.register-btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #FF6500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: #C40C0C;
+}
+
+.form-row input,
+.form-row select {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    background-color: #f8f8f8;
+}
+
+.form-row select {
+    cursor: pointer;
+}
+
+.form-row input:focus,
+.form-row select:focus {
+    border-color: #ff4500;
+}
+
+
+/* REGISTER MANAGER END */
