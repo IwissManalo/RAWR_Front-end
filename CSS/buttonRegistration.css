@@ -14,131 +14,180 @@ body {
 
 /* NAVIGATION BURGER START */
 .wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    background: #C50C0C;
-    clip-path: circle(25px at calc(100% - 45px) 37px);
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.3s ease-in-out;
-    z-index: 10; /* Ensure the nav menu is on top */
-  }
-  
-  #active:checked ~ .wrapper {
-    visibility: visible;
-    opacity: 1;
-    clip-path: circle(75%);
-  }
-  
-  /* Hide registration section and footer when the nav menu is open */
-  #active:checked ~ .rawr-body-wrapper,
-  #active:checked ~ footer {
-    visibility: hidden;
-    opacity: 0;
-    z-index: -1; /* Move the sections and footer behind the nav */
-  }
-  
-  .menu-btn {
-    display: inline-block;
-    height: 50px;
-    width: 50px;
-    padding-left: 10px;
-    font-size: 25px;
-    color: white;
-    background-color: #C50C0C;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    text-align: center;
-    line-height: 50px;
-  }
-  
-  #active:checked ~ .nav-right .menu-btn i {
-    content: "\f00d"; /* Hamburger icon changes to close icon */
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .menu-btn i {
-    content: "\f0c9"; /* Default hamburger icon */
-  }
-  
-  .wrapper ul {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    list-style: none;
-    text-align: center;
-  }
-  
-  .wrapper ul li a {
-    font-weight: bold;
-    color: none;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 20px;
-    color: #fff;
-    position: relative;
-    line-height: 50px;
-    transition: all 0.3s ease;
-  }
-  
-  .wrapper ul li a:after {
-    position: absolute;
-    content: "";
-    background: #fff;
-    width: 100%;
-    height: 50px;
-    left: 0;
-    border-radius: 50px;
-    transform: scaleY(0);
-    z-index: -1;
-    transition: transform 0.3s ease;
-  }
-  
-  .wrapper ul li a:hover:after {
-    transform: scaleY(1);
-  }
-  
-  .wrapper ul li a:hover {
-    color: #C50C0C;
-  }
-  
-  input[type="checkbox"] {
-    display: none;
-  }
-  
-  /* Ensure the navigation logo remains in the top right corner even when the menu is active */
-  .nav-header {
-    position: fixed;
-    top: 0;
-    right: 0;
-    padding: 10px;
-    z-index: 9999;
-  }
-  
-  .nav-logo {
-    max-width: 120px;
-    height: auto;
-  }
-  
-  .nav-title-red {
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-    margin-left: 10px;
-  }
-  
-  .nav-left {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  
-  /* NAVIGATION BURGER END */
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;  
+  width: 100%;
+  background: #C50C0C;
+  clip-path: circle(25px at calc(100% - 45px) 37px);
+  visibility: hidden; 
+  opacity: 0; 
+  transition: all 0.3s ease-in-out;
+}
+
+#active:checked ~ .wrapper {
+  visibility: visible;
+  opacity: 1;
+  clip-path: circle(75%);
+}
+
+.menu-btn {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  padding-left: 10px;
+  font-size: 25px;
+  color: white;
+  background-color: #C50C0C;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  line-height: 50px;
+}
+
+#active:checked ~ .nav-right .menu-btn i {
+  content: "\f00d";
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-btn i {
+  content: "\f0c9";
+}
+
+.wrapper ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+
+.wrapper ul li a {
+  font-weight: bold;
+  color: none;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 20px;
+  color: #fff;
+  position: relative;
+  line-height: 50px;
+  transition: all 0.3s ease;
+}
+
+.wrapper ul li a:after {
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 100%;
+  height: 50px;
+  left: 0;
+  border-radius: 50px;
+  transform: scaleY(0);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+.wrapper ul li a:hover:after {
+  transform: scaleY(1);
+}
+
+.wrapper ul li a:hover {
+  color: #C50C0C;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+/* NAVIGATION BURGER END */
+
+/* NAVIGATION HEADER START */
+.nav-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: white;
+  z-index: 10;
+  background-color: transparent; 
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.nav-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.nav-title-red {
+  font-size: 18px;
+  font-weight: bold;
+  color: #C50C0C;
+}
+.nav-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #C50C0C;
+  color: white;
+  padding: 30px 20px 30px 15px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#active:checked ~ .nav-header .nav-logo,
+#active:checked ~ .nav-header .nav-title,
+#active:checked ~ .nav-header .nav-title-red,
+#active:checked ~ .nav-header .nav-btn,
+#active:checked ~ .hero-section,
+#active:checked ~ .rawr-body-wrapper{
+  opacity: 0;               
+  visibility: hidden;      
+  transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+
+#active:not(:checked) ~ .nav-header .nav-logo,
+#active:not(:checked) ~ .nav-header .nav-title {
+  opacity: 1;               
+  visibility: visible;      
+  transition: opacity 0.3s ease, visibility 0s 0s;
+}
+
+.nav-btn{
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 80px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background-color: #FFC100;
+}
+
+/* NAVIGATION HEADER END */
+
   
   
   /* Body wrapper to center the content */
@@ -151,6 +200,10 @@ body {
       background-color: #FFFFFF;
       padding-top: 60px; /* Adjusted to prevent nav from overlapping content */
       transition: padding-top 0.3s ease;
+  }
+
+  .rawr-body-wrapper h2{
+    color: #C40C0C;
   }
   
   /* Adjust registration container to avoid overlap with menu */
@@ -1437,36 +1490,41 @@ input[type="checkbox"] {
 
 .rawr-form button {
     padding: 10px;
+    width: 100%;
     font-size: 1rem;
+    font-weight: bold;
     background: #FF9B2C;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: ease-in-out all 0.2s;
 }
 
 .rawr-form button:hover {
-    background: #efb813;
+    background: #FF6500;
 }
 
 /* Switch Button */
 /* Switch Button */
 .rawr-switch-btn {
-    margin-top: 15px;
+    margin: 15px;
     display:block;
+    font-weight: bold;
     background: #C40C0C;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 2px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    width: 100%; /* Make the buttons full width */
-    text-align: center; /* Ensure text is centered */
+    width: 400px; 
+    text-align: center;
+    transition: ease-in-out all 0.2s;
 }
 
 .rawr-switch-btn:hover {
-    background: #a30808;
+    background: #9e0a0a;
 }
 
 .rawr-switch-btn:active {
@@ -1514,22 +1572,21 @@ input[type="checkbox"] {
     font-family: Poppins;
     font-weight: 1000;
     margin-top:80px;
-    margin-left: 550px;
-    font-size: 20px;
+    margin-left: 650px;
+    font-size: 22px;
 }
 
 
 .sub-title{
     font-family: Poppins;
     font-weight: 500;
-    margin-left: 573px;
-    font-size: 12px;
+    margin-left: 665px;
+    font-size: 14px;
     margin-bottom:20px;
 }
 
 .login-link {
-    font-size: 12px;
+    font-size: 15px;
     color: #C40C0C;
-    text-decoration: underline;  /* Underline the link */
-    margin-left: 5px;  /* Small space between the text and the link */
+    text-decoration: underline;
 }
