@@ -815,8 +815,9 @@ input[type="checkbox"] {
   font-weight: bold;
 }
 
-.register-btn {
+.content-overlay .register-btn {
   padding: 10px 30px;
+  width: 20%;
   background-color: #ffffff;
   color: #000000;
   font-weight: bold;
@@ -827,7 +828,7 @@ input[type="checkbox"] {
   transition: background-color 0.3s;
 }
 
-.register-btn:hover {
+.content-overlay .register-btn:hover {
   background-color: #FFC100;
 }
 /* MAP SECTION END */
