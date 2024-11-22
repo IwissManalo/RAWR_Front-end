@@ -672,8 +672,8 @@ background-color: #009C03;
     display: none;
   }
   /* NAVIGATION BURGER END - ADMIN VERSION */
-  
-/* Overlay for Edit/Modify Shop */
+
+/* OVERLAY START */
 .edit-overlay {
     position: fixed;
     top: 0;
@@ -706,6 +706,60 @@ background-color: #009C03;
     color: #000;
 }
 
+.edit-overlay-customer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000099;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.edit-overlay-content-customer {
+    background: #ffa500;
+    padding: 30px; 
+    border-radius: 10px;
+    text-align: center;
+    width: 450px;
+    height: 400px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+.edit-overlay-content-customer h3 {
+    margin-bottom: 1px;
+    font-size: 20px;
+    color: #000;
+}
+
+.edit-overlay-content-customer label {
+    padding-bottom: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+}
+
+.edit-overlay-content-customer .stars i {
+    color: #C40C0C;
+    font-size: 30px;
+}
+
+textarea#review-text {
+    width: 100%;
+    height: 150px; 
+    padding: 10px; 
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px; 
+    box-sizing: border-box; 
+    resize: none;
+}
 
 /* Label Styling */
 label {
