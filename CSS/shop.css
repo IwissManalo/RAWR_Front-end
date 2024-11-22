@@ -761,6 +761,44 @@ textarea#review-text {
     resize: none;
 }
 
+.edit-overlay-admin {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000099;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.edit-overlay-content-admin {
+    background: #ffa500;
+    padding: 30px; 
+    border-radius: 10px;
+    text-align: center;
+    width: 450px;
+    height: 400px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+.edit-overlay-content-admin h3 {
+    margin-bottom: 1px;
+    font-size: 20px;
+    color: #000;
+}
+
+.edit-overlay-content-admin label {
+    font-size: 18px;
+    color: #000;
+}
+
+
 /* Label Styling */
 label {
     font-size: 14px;
