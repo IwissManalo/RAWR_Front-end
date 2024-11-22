@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R.A.W.R - Owner Profile</title>
+    <link rel="icon" type="image/x-icon" href="CSS/Images/logo.png">
+    <link href="CSS/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+    <input type="checkbox" id="active-owner" hidden>
+    <header class="nav-header-owner">
+        <div class="nav-left-owner">
+            <img src="CSS/Images/logo.png" alt="Icon" class="nav-logo-owner">
+            <span class="nav-title-owner">RELIABLE AUTO WORKSHOP REVOLUTION</span>
+        </div>
+        <div class="nav-right-owner">
+            <button class="nav-btn-owner" id="saveChangesBtn">SAVE CHANGES</button>
+            <label for="active-owner" class="menu-btn-owner">
+                <i class="fas fa-bars"></i>
+            </label>
+        </div>
+    </header>
+    
+    <div class="wrapper-owner">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="ownerShops.html">MY SHOPS</a></li>
+            <li><a href="#">MY PROFILE</a></li>
+            <li><a href="aboutUs.html">ABOUT US</a></li>
+            <li><a href="FAQs.html">HELP CENTER</a></li>
+            <li><a href="logout.html">LOG-OUT</a></li>
+        </ul>
+    </div>
+
+    <section class="profile-section">
+        <div class="profile-image">
+            <img src="CSS/Images/logo.png" alt="Profile Logo">
+        </div>
+        <div class="profile-fields">
+            <div class="field-group">
+                <label for="firstName">First Name</label>
+                <div class="input-group">
+                    <input type="text" id="firstName" value="Ralph Benedict" disabled>
+                    <i class="fas fa-edit edit-icon" id="edit-firstName"></i>
+                </div>
+            </div>
+            <div class="field-group">
+                <label for="lastName">Last Name</label>
+                <div class="input-group">
+                    <input type="text" id="lastName" value="Vicente" disabled>
+                    <i class="fas fa-edit edit-icon" id="edit-lastName"></i>
+                </div>
+            </div>
+            <div class="field-group">
+                <label for="email">Email</label>
+                <div class="input-group">
+                    <input type="email" id="email" value="irishmanalo@gmail.com" disabled>
+                    <i class="fas fa-edit edit-icon" id="edit-email"></i>
+                </div>
+            </div>
+            <div class="field-group">
+                <label for="phoneNumber">Phone Number</label>
+                <div class="input-group">
+                    <input type="text" id="phoneNumber" value="0912-3333-444" disabled>
+                    <i class="fas fa-edit edit-icon" id="edit-phoneNumber"></i>
+                </div>
+            </div>
+            <div class="field-group">
+                <label for="password">Password</label>
+                <div class="input-group">
+                    <input type="password" id="password" value="***********" disabled>
+                    <i class="fas fa-edit edit-icon" id="edit-password"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer class="footer_section-owner">
+        <div>
+            <p>
+                <i class="fas fa-envelope"></i>
+                rawrofficial@gmail.com
+            </p>
+        </div>
+        
+        <p>
+            Copyright &copy; 2024 All Rights Reserved. Design by Irish Manalo & Ralph Vicente
+        </p>
+    </footer>
+
+    <script>            
+        const editIcons = document.querySelectorAll('.edit-icon');
+        const saveChangesBtn = document.getElementById('saveChangesBtn');
+        const inputs = document.querySelectorAll('.profile-fields input');
+
+        let isEditable = false;
+
+        editIcons.forEach((editIcon) => {
+            editIcon.addEventListener('click', () => {
+                const inputId = editIcon.id.replace('edit-', '');
+                const inputField = document.getElementById(inputId);
+
+                inputField.disabled = !inputField.disabled;
+
+                isEditable = Array.from(inputs).some(input => !input.disabled);
+                saveChangesBtn.style.display = isEditable ? 'inline-block' : 'none';
+            });
+        });
+
+        saveChangesBtn.addEventListener('click', () => {
+            alert('Changes saved successfully!');
+
+            inputs.forEach(input => {
+                input.disabled = true;
+            });
+            saveChangesBtn.style.display = 'none';
+            isEditable = false;
+        });
+
+        saveChangesBtn.style.display = 'none';
+    </script>
+</body>
+</html>
