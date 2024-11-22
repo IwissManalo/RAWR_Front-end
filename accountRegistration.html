@@ -28,7 +28,7 @@
         <ul>
             <li><a href="unregisteredHomepage.html">HOME</a></li>
             <li><a href="accountRegistration.html">REGISTER</a></li>
-            <li><a href="#">ABOUT US</a></li>
+            <li><a href="aboutUs.html">ABOUT US</a></li>
             <li><a href="FAQs.html">HELP CENTER</a></li>
         </ul>
     </div>
@@ -37,7 +37,7 @@
         <h1 class="title">ACCOUNT REGISTRATION</h1>
         <h1 class="sub-title">
             Already a R.A.W.R Member? 
-            <a href="" class="login-link">Log-in</a>
+            <a href="loginCustomer.html" class="login-link" >Log-in</a>
         </h1>
     </div>    
     
@@ -49,12 +49,12 @@
                 <br>
                 <h1>CUSTOMER REGISTRATION</h1><br><br>
                 <form class="rawr-form">
-                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="First Name" required>   
                     <input type="text" placeholder="Last Name" required>
                     <input type="email" placeholder="Email" required>
                     <input type="password" placeholder="Password" required>
                     <input type="tel" placeholder="Phone Number" required>
-                    <button type="button">REGISTER</button>
+                    <button type="button" onclick="switchToShopOwner()">REGISTER</button>
                 </form>
                 <button class="rawr-switch-btn" onclick="switchToShopOwner()">REGISTER AS SHOP OWNER</button>
             </div>
