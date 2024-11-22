@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R.A.W.R - Shop</title>
+    <link rel="icon" type="image/x-icon" href="CSS/Images/logo.png">
+    <link href="CSS/shop.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+    <input type="checkbox" id="active" hidden>
+    <header class="nav-header">
+        <div class="nav-left">
+            <img src="CSS/Images/logo.png" alt="Icon" class="nav-logo">
+            <span class="nav-title-red">RELIABLE AUTO WORKSHOP REVOLUTION</span>
+        </div>
+        <div class="nav-right">
+            <button class="nav-btn" id="edit-shop-btn">EDIT SHOP</button>
+            <label for="active" class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+        </div>
+    </header>
+
+    <div id="edit-overlay" class="edit-overlay">
+        <div class="edit-overlay-content">
+            <form id="edit-form">
+                <label>
+                    <input type="radio" name="visibility" value="public">
+                    Set Shop as Public
+                </label><br>
+                <label>
+                    <input type="radio" name="visibility" value="private">
+                    Set Shop as Private
+                </label><br><br>
+
+                <label>Shop Name</label>
+                <input type="text" id="shop-name" placeholder="Enter Shop Name"><br>
+
+                <label>Address</label>
+                <input type="text" id="shop-address" placeholder="Enter Address"><br>
+
+                <label>Email</label>
+                <input type="email" id="shop-email" placeholder="Enter Email"><br>
+
+                <label>Working Hours</label>
+                <input type="text" id="shop-hours" placeholder="Enter Working Hours"><br>
+
+                <label>Contact Number</label>
+                <input type="text" id="shop-contact" placeholder="Enter Contact Number"><br>
+
+                <button type="button" id="save-shop-btn" class="save-btn">SAVE CHANGES</button>
+                <button type="button" class="delete-btn" id="delete-shop-btn">DELETE MY SHOP</button>
+                <button type="button" class="close-btn" id="close-overlay-btn">CLOSE</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <ul>
+            <li><a href="managerHomepage.html">HOME</a></li>
+            <li><a href="ownerShops.html">MY SHOPS</a></li>
+            <li><a href="managerProfile.html">MY PROFILE</a></li>
+            <li><a href="aboutUs.html">ABOUT US</a></li>
+            <li><a href="FAQs.html">HELP CENTER</a></li>
+            <li><a href="logout.html">LOG-OUT</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <section class="shop-details">
+            <section class="profile-section">
+                <div class="profile-container">
+                    <img src="CSS/Images/shop.png" alt="Shop Profile" class="profile-img">
+                </div>
+            </section>
+
+            <div class="shop-title-container">
+                <i id="visibility-icon" class="fas fa-lock lock-icon"></i>
+                <h2 id="shop-title">DELA ROSA ULTIMATE MECHANIC SHOP</h2>
+            </div>
+            
+            <div class="line"></div>
+            <p class="shop-info">
+                <span id="shop-address-display" class="address">123 DELA ROSA STREET, Makati City, Philippines</span>
+                <span id="shop-email-display" class="email">Email: delarosaauto@gmail.com</span>
+            </p>
+            <p class="shop-info">
+                <span id="shop-hours-display" class="working-hours">Monday to Saturday: 8:00 AM - 6:00 PM</span>
+                <span id="shop-contact-display" class="contact">Contact number: (0912) 345-6789</span>
+            </p>
+            
+            <div class="sections-wrapper">
+                <section class="about-us">
+                    <h3>About Us</h3><br>
+                    <p>At Dela Rosa Mechanic Shop, we specialize in providing expert vehicle repair and maintenance services for all types of motorcycles and cars. Our certified mechanics ensure top-quality service to get you back on the road safely.</p>
+                </section>
+            
+                <section class="services-and-payments">
+                    <div class="services">
+                        <h3>Services We Offer</h3>
+                        <ul>
+                            <li>General repairs and tune-ups</li>
+                            <li>Oil change and engine diagnostics</li>
+                            <li>Brake and clutch system maintenance</li>
+                            <li>Tire replacement and balancing</li>
+                            <li>Electrical troubleshooting</li>
+                        </ul>
+                    </div>
+            
+                    <div class="accepted-payments">
+                        <h3>Accepted Payments</h3>
+                        <div class="payment-method">
+                            <img src="CSS/Images/cash.png" alt="Credit Card Icon">
+                            <span>Cash</span>
+                        </div>
+                        <div class="payment-method">
+                            <img src="CSS/Images/card.png" alt="Debit Card Icon">
+                            <span>Online Bank</span>
+                        </div>
+                        <div class="payment-method">
+                            <img src="CSS/Images/gcash.png" alt="Cash Icon">
+                            <span>Gcash</span>
+                        </div>
+                        <div class="payment-method">
+                            <img src="CSS/Images/visa.png" alt="E-Wallet Icon">
+                            <span>Card</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+        </section>
+        
+        <section class="reviews-section">
+            <div class="reviews-heading">
+                <h2>RATING</h2>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div><br><br>
+            </div>
+            <h3 class="rating">4.0 out of 5</h3>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="customer-name">
+                        <span>Customer 1</span>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <p class="review-desc">I like this shop! Very accommodating and friendly staff. Definitely coming back again!</p>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="customer-name">
+                        <span>Customer 2</span>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="customer-name">
+                        <span>Customer 3</span>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <p class="review-desc">The mechanics are skilled, but the pricing was a little higher than expected.</p>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="customer-name">
+                        <span>Customer 4</span>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="customer-name">
+                        <span>Customer 5</span>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="customer-name">
+                        <span>Customer 6</span>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <p class="review-desc">Fantastic service! The mechanics were quick and did an excellent job.</p>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="customer-name">
+                        <span>Customer 7</span>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>    
+                <p class="review-desc">Decent work, but I would appreciate more transparent pricing upfront.</p>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="customer-name">
+                        <span>Customer 8</span>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>    
+                <p class="review-desc">Decent work, but I would appreciate more transparent pricing upfront.</p>
+            </div>
+
+        </section>
+    </div>
+
+    <footer class="footer_section">
+        <div>
+            <p>
+                <i class="fas fa-envelope"></i>
+                rawrofficial@gmail.com
+            </p>
+        </div>
+        <p>
+            Copyright &copy; 2024 All Rights Reserved. Design by Irish Manalo & Ralph Vicente
+        </p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const editShopBtn = document.getElementById("edit-shop-btn");
+            const overlay = document.getElementById("edit-overlay");
+            const closeOverlayBtn = document.getElementById("close-overlay-btn");
+            const saveShopBtn = document.getElementById("save-shop-btn");
+            const deleteShopBtn = document.getElementById("delete-shop-btn");
+            const visibilityIcon = document.getElementById("visibility-icon");
+            const publicRadio = document.querySelector('input[name="visibility"][value="public"]');
+            const privateRadio = document.querySelector('input[name="visibility"][value="private"]');
+            
+            // Editable fields
+            const shopNameInput = document.getElementById("shop-name");
+            const shopAddressInput = document.getElementById("shop-address");
+            const shopEmailInput = document.getElementById("shop-email");
+            const shopHoursInput = document.getElementById("shop-hours");
+            const shopContactInput = document.getElementById("shop-contact");
+            
+            const shopTitle = document.getElementById("shop-title");
+            const shopAddressDisplay = document.getElementById("shop-address-display");
+            const shopEmailDisplay = document.getElementById("shop-email-display");
+            const shopHoursDisplay = document.getElementById("shop-hours-display");
+            const shopContactDisplay = document.getElementById("shop-contact-display");
+
+            let isEditing = false;
+
+            // Show the overlay and toggle button text
+            editShopBtn.addEventListener("click", () => {
+                if (!isEditing) {
+                    overlay.style.display = "flex";
+                    editShopBtn.textContent = "SAVE CHANGES"; 
+                    isEditing = true;
+
+                    // Populate form with existing values
+                    shopNameInput.value = shopTitle.textContent;
+                    shopAddressInput.value = shopAddressDisplay.textContent;
+                    shopEmailInput.value = shopEmailDisplay.textContent;
+                    shopHoursInput.value = shopHoursDisplay.textContent;
+                    shopContactInput.value = shopContactDisplay.textContent;
+                } else {
+                    overlay.style.display = "none"; 
+                    editShopBtn.textContent = "EDIT SHOP";  
+                    isEditing = false;
+                }
+            });
+
+            // Save shop details
+            saveShopBtn.addEventListener("click", () => {
+                shopTitle.textContent = shopNameInput.value;
+                shopAddressDisplay.textContent = shopAddressInput.value;
+                shopEmailDisplay.textContent = shopEmailInput.value;
+                shopHoursDisplay.textContent = shopHoursInput.value;
+                shopContactDisplay.textContent = shopContactInput.value;
+
+                overlay.style.display = "none"; 
+                editShopBtn.textContent = "EDIT SHOP";  
+                isEditing = false;  // Exit edit mode
+            });
+
+            // Close overlay without saving
+            closeOverlayBtn.addEventListener("click", () => {
+                overlay.style.display = "none";
+                if (isEditing) {
+                    editShopBtn.textContent = "SAVE CHANGES"; 
+                }
+            });
+
+            // Delete shop
+            deleteShopBtn.addEventListener("click", () => {
+                const confirmDelete = confirm("Are you sure you want to delete your shop?");
+                if (confirmDelete) {
+                    alert("Your shop has been deleted.");
+                    overlay.style.display = "none";
+                    editShopBtn.textContent = "EDIT SHOP"; 
+                    isEditing = false;  
+                }
+            });
+
+            // Update visibility icon based on radio selection
+            publicRadio.addEventListener("change", () => {
+                if (publicRadio.checked) {
+                    visibilityIcon.classList.remove("fas", "fa-lock");
+                    visibilityIcon.classList.add("fas", "fa-globe"); 
+                }
+            });
+
+            privateRadio.addEventListener("change", () => {
+                if (privateRadio.checked) {
+                    visibilityIcon.classList.remove("fas", "fa-globe");
+                    visibilityIcon.classList.add("fas", "fa-lock"); 
+                }
+            });
+        });
+    </script>  
+
+    </body>
+    </html>
+
