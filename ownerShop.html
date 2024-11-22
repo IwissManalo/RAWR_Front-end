@@ -27,20 +27,35 @@
 
     <div id="edit-overlay" class="edit-overlay">
         <div class="edit-overlay-content">
-            <h3>EDIT SHOP</h3>
-            <form>
+            <form id="edit-form">
                 <label>
                     <input type="radio" name="visibility" value="public">
-                    Set page as public
+                    Set Shop as Public
                 </label><br>
                 <label>
                     <input type="radio" name="visibility" value="private">
-                    Set page as private
-                </label><br>
+                    Set Shop as Private
+                </label><br><br>
+
+                <label>Shop Name</label>
+                <input type="text" id="shop-name" placeholder="Enter Shop Name"><br>
+
+                <label>Address</label>
+                <input type="text" id="shop-address" placeholder="Enter Address"><br>
+
+                <label>Email</label>
+                <input type="email" id="shop-email" placeholder="Enter Email"><br>
+
+                <label>Working Hours</label>
+                <input type="text" id="shop-hours" placeholder="Enter Working Hours"><br>
+
+                <label>Contact Number</label>
+                <input type="text" id="shop-contact" placeholder="Enter Contact Number"><br>
+
+                <button type="button" id="save-shop-btn" class="save-btn">SAVE CHANGES</button>
                 <button type="button" class="delete-btn" id="delete-shop-btn">DELETE MY SHOP</button>
-                <button type="button" id="save-btn" class="save-btn">SAVE CHANGES</button>
+                <button type="button" class="close-btn" id="close-overlay-btn">CLOSE</button>
             </form>
-            <button type="button" class="close-btn" id="close-overlay-btn">Close</button>
         </div>
     </div>
 
@@ -66,17 +81,17 @@
 
             <div class="shop-title-container">
                 <i id="visibility-icon" class="fas fa-lock lock-icon"></i>
-                <h2>DELA ROSA ULTIMATE MECHANIC SHOP</h2>
+                <h2 id="shop-title">DELA ROSA ULTIMATE MECHANIC SHOP</h2>
             </div>
             
             <div class="line"></div>
             <p class="shop-info">
-                <span class="address">123 DELA ROSA STREET, Makati City, Philippines</span>
-                <span class="email">Email: delarosaauto@gmail.com</span>
+                <span id="shop-address-display" class="address">123 DELA ROSA STREET, Makati City, Philippines</span>
+                <span id="shop-email-display" class="email">Email: delarosaauto@gmail.com</span>
             </p>
             <p class="shop-info">
-                <span class="working-hours">Monday to Saturday: 8:00 AM - 6:00 PM</span>
-                <span class="contact">Contact number: (0912) 345-6789</span>
+                <span id="shop-hours-display" class="working-hours">Monday to Saturday: 8:00 AM - 6:00 PM</span>
+                <span id="shop-contact-display" class="contact">Contact number: (0912) 345-6789</span>
             </p>
             
             <div class="sections-wrapper">
@@ -120,7 +135,7 @@
             </div>
             
         </section>
-
+        
         <section class="reviews-section">
             <div class="reviews-heading">
                 <h2>RATING</h2>
@@ -275,51 +290,99 @@
     </footer>
 
     <script>
-    document.addEventListener("DOMContentLoaded", () => {
-    const editShopBtn = document.getElementById("edit-shop-btn");
-    const overlay = document.getElementById("edit-overlay");
-    const closeOverlayBtn = document.getElementById("close-overlay-btn");
-    const deleteShopBtn = document.getElementById("delete-shop-btn");
-    const visibilityIcon = document.getElementById("visibility-icon");
-    const publicRadio = document.querySelector('input[name="visibility"][value="public"]');
-    const privateRadio = document.querySelector('input[name="visibility"][value="private"]');
-        
-        // Show the overlay
-        editShopBtn.addEventListener("click", () => {
-            overlay.style.display = "flex";
-        });
-        
-        // Close the overlay
-        closeOverlayBtn.addEventListener("click", () => {
-            overlay.style.display = "none";
-        });
-        
-        // Handle "DELETE MY SHOP" button click
-        deleteShopBtn.addEventListener("click", () => {
-            const confirmDelete = confirm("Are you sure you want to delete your shop?");
-            if (confirmDelete) {
-                alert("Your shop has been deleted.");
+        document.addEventListener("DOMContentLoaded", () => {
+            const editShopBtn = document.getElementById("edit-shop-btn");
+            const overlay = document.getElementById("edit-overlay");
+            const closeOverlayBtn = document.getElementById("close-overlay-btn");
+            const saveShopBtn = document.getElementById("save-shop-btn");
+            const deleteShopBtn = document.getElementById("delete-shop-btn");
+            const visibilityIcon = document.getElementById("visibility-icon");
+            const publicRadio = document.querySelector('input[name="visibility"][value="public"]');
+            const privateRadio = document.querySelector('input[name="visibility"][value="private"]');
+            
+            // Editable fields
+            const shopNameInput = document.getElementById("shop-name");
+            const shopAddressInput = document.getElementById("shop-address");
+            const shopEmailInput = document.getElementById("shop-email");
+            const shopHoursInput = document.getElementById("shop-hours");
+            const shopContactInput = document.getElementById("shop-contact");
+            
+            const shopTitle = document.getElementById("shop-title");
+            const shopAddressDisplay = document.getElementById("shop-address-display");
+            const shopEmailDisplay = document.getElementById("shop-email-display");
+            const shopHoursDisplay = document.getElementById("shop-hours-display");
+            const shopContactDisplay = document.getElementById("shop-contact-display");
+
+            let isEditing = false;
+
+            // Show the overlay and toggle button text
+            editShopBtn.addEventListener("click", () => {
+                if (!isEditing) {
+                    overlay.style.display = "flex";
+                    editShopBtn.textContent = "SAVE CHANGES"; 
+                    isEditing = true;
+
+                    // Populate form with existing values
+                    shopNameInput.value = shopTitle.textContent;
+                    shopAddressInput.value = shopAddressDisplay.textContent;
+                    shopEmailInput.value = shopEmailDisplay.textContent;
+                    shopHoursInput.value = shopHoursDisplay.textContent;
+                    shopContactInput.value = shopContactDisplay.textContent;
+                } else {
+                    overlay.style.display = "none"; 
+                    editShopBtn.textContent = "EDIT SHOP";  
+                    isEditing = false;
+                }
+            });
+
+            // Save shop details
+            saveShopBtn.addEventListener("click", () => {
+                shopTitle.textContent = shopNameInput.value;
+                shopAddressDisplay.textContent = shopAddressInput.value;
+                shopEmailDisplay.textContent = shopEmailInput.value;
+                shopHoursDisplay.textContent = shopHoursInput.value;
+                shopContactDisplay.textContent = shopContactInput.value;
+
+                overlay.style.display = "none"; 
+                editShopBtn.textContent = "EDIT SHOP";  
+                isEditing = false;  // Exit edit mode
+            });
+
+            // Close overlay without saving
+            closeOverlayBtn.addEventListener("click", () => {
                 overlay.style.display = "none";
-            }
-        });
-        
-        // Change icon when visibility is toggled
-        publicRadio.addEventListener("change", () => {
-            if (publicRadio.checked) {
-                visibilityIcon.classList.remove("fas", "fa-lock");
-                visibilityIcon.classList.add("fas", "fa-globe");  // Replace with the public logo icon
-            }
-        });
+                if (isEditing) {
+                    editShopBtn.textContent = "SAVE CHANGES"; 
+                }
+            });
 
-        privateRadio.addEventListener("change", () => {
-            if (privateRadio.checked) {
-                visibilityIcon.classList.remove("fas", "fa-globe");
-                visibilityIcon.classList.add("fas", "fa-lock");  // Revert to lock icon
-            }
-        });
-    });
+            // Delete shop
+            deleteShopBtn.addEventListener("click", () => {
+                const confirmDelete = confirm("Are you sure you want to delete your shop?");
+                if (confirmDelete) {
+                    alert("Your shop has been deleted.");
+                    overlay.style.display = "none";
+                    editShopBtn.textContent = "EDIT SHOP"; 
+                    isEditing = false;  
+                }
+            });
 
-    </script>    
+            // Update visibility icon based on radio selection
+            publicRadio.addEventListener("change", () => {
+                if (publicRadio.checked) {
+                    visibilityIcon.classList.remove("fas", "fa-lock");
+                    visibilityIcon.classList.add("fas", "fa-globe"); 
+                }
+            });
+
+            privateRadio.addEventListener("change", () => {
+                if (privateRadio.checked) {
+                    visibilityIcon.classList.remove("fas", "fa-globe");
+                    visibilityIcon.classList.add("fas", "fa-lock"); 
+                }
+            });
+        });
+    </script>  
 
     </body>
     </html>
