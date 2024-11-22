@@ -499,7 +499,8 @@ input[type="checkbox"] {
 #active-owner:checked ~ .nav-header-owner .nav-title-owner,
 #active-owner:checked ~ .nav-header-owner .nav-btn-owner,
 #active-owner:checked ~ .hero-section,
-#active-owner:checked ~ .map-section {
+#active-owner:checked ~ .map-section,
+#active-owner:checked ~ .profile-section {
   opacity: 0;             
   visibility: hidden;      
   transition: opacity 0.3s ease, visibility 0s 0.3s;
@@ -1587,3 +1588,68 @@ input[type="checkbox"] {
 }
 
 /* REVIEW SHOP END */
+
+/* PROFILE SECTION START */
+.profile-section {
+  margin: 131px 50px 131px 50px;
+  padding: 50px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+
+.profile-image {
+  flex: 0 0 30%;
+  text-align: center;
+}
+
+.profile-image img {
+  max-width: 80%;
+  border-radius: 8px;
+  background-color: #ffc107;
+  padding: 1rem;
+}
+
+.profile-fields {
+  flex: 1;
+  padding-left: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.input-group input:disabled {
+  background-color: #f9f9f9;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.input-group .edit-icon {
+  position: absolute;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #C40C0C;
+}
+/* PROFILE SECTION END */
