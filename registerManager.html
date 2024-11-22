@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R.A.W.R - Register Manager</title>
+    <link rel="icon" type="image/x-icon" href="CSS/Images/logo.png">
+    <link href="CSS/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+    <input type="checkbox" id="active-owner" hidden>
+    <header class="nav-header-owner">
+        <div class="nav-left-owner">
+            <img src="CSS/Images/logo.png" alt="Icon" class="nav-logo-owner">
+            <span class="nav-title-owner">RELIABLE AUTO WORKSHOP REVOLUTION</span>
+        </div>
+        <div class="nav-right-owner">
+            <label for="active-owner" class="menu-btn-owner">
+                <i class="fas fa-bars"></i>
+            </label>
+        </div>
+    </header>
+    
+    <div class="wrapper-owner">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="ownerShops.html">MY SHOPS</a></li>
+            <li><a href="#">MY PROFILE</a></li>
+            <li><a href="aboutUs.html">ABOUT US</a></li>
+            <li><a href="FAQs.html">HELP CENTER</a></li>
+            <li><a href="logout.html">LOG-OUT</a></li>
+        </ul>
+    </div>
+
+    <div class="manager-registration">
+        <h1 class="register-title">REGISTER MANAGER</h1>
+        <form class="registration-form">
+            <div class="form-row">
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name" required>
+            </div>
+            <div class="form-row">
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="form-row">
+                <input type="password" placeholder="Password" required>
+                <input type="text" placeholder="Phone Number" required>
+            </div>
+            <div class="form-row">
+                <select required>
+                    <option value="" disabled selected>Assign In Shop</option>
+                    <option value="shop1">Dela Rosa Ultimate Shop</option>
+                    <option value="shop2">Goodyear Autocare</option>
+                    <option value="shop3">Blade Carworks</option>
+                </select>
+            </div>
+            <button type="submit" class="register-btn">REGISTER</button>
+        </form>
+    </div>
+     
+
+    <footer class="footer_section-owner">
+        <div>
+            <p>
+                <i class="fas fa-envelope"></i>
+                rawrofficial@gmail.com
+            </p>
+        </div>
+        
+        <p>
+            Copyright &copy; 2024 All Rights Reserved. Design by Irish Manalo & Ralph Vicente
+        </p>
+    </footer>
+
+</body>
+</html>
